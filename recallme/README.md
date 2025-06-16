@@ -21,6 +21,12 @@ Dans un projet réel, on utiliserait l'API officielle RappelConso, mais cette d�
    ```bash
    python -m recallme.gui
    ```
+   Lancez cette commande depuis le dossier parent qui contient le
+   répertoire `recallme`. Si vous êtes déjà dans ce répertoire, exécutez
+   simplement :
+   ```bash
+   python gui.py
+   ```
 
 Cette interface utilise Tkinter pour afficher une fenêtre et énumérer les
 produits rappelés détectés dans vos achats.
@@ -28,6 +34,11 @@ produits rappelés détectés dans vos achats.
 4. Démarrer l'application web (facultatif) :
    ```bash
    python -m recallme.app
+   ```
+   Comme pour la commande précédente, lancez-la depuis le dossier parent.
+   Depuis `recallme`, vous pouvez exécuter directement :
+   ```bash
+   python app.py
    ```
    Une fois le serveur lancé, ouvrez `http://localhost:5000` dans votre navigateur
    pour voir vos achats. Les lignes en rouge indiquent les produits rappelés.
