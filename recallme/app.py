@@ -1,5 +1,13 @@
 from flask import Flask, render_template
-from .main import load_recalls, load_purchases
+
+try:  # Support execution with `python app.py`
+    from .main import load_recalls, load_purchases  # type: ignore
+except ImportError:  # pragma: no cover - fallback for direct script execution
+    import sys
+    from pathlib import Path
+
+    sys.path.append(str(Path(__file__).resolve().parent))
+    from main import load_recalls, load_purchases
 
 def merge_data():
     recalls = load_recalls()
