@@ -1,7 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
 
-from .main import load_recalls, load_purchases, check_recalls
+try:  # Allow execution with `python gui.py`
+    from .main import load_recalls, load_purchases, check_recalls  # type: ignore
+except ImportError:  # pragma: no cover - fallback when run directly
+    import sys
+    from pathlib import Path
+
+    sys.path.append(str(Path(__file__).resolve().parent))
+    from main import load_recalls, load_purchases, check_recalls
 
 
 def run_gui():
