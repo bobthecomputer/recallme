@@ -8,7 +8,16 @@
 </head>
 <body>
 <div class="container py-4">
-    <h1 class="mb-4">Historique d'achats</h1>
+    <div class="header d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            {% if logo_exists %}
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="header-logo">
+            {% endif %}
+            <h1 class="mb-0">RecallMe</h1>
+        </div>
+        <a href="{{ url_for('demo') }}" class="btn btn-light btn-lg text-primary fw-bold">Essayer la démo</a>
+    </div>
+    <p class="tagline">Contrôlez vos achats en un clic</p>
     {% if results %}
     <table class="table table-striped">
         <thead>
@@ -49,7 +58,9 @@
         </tbody>
     </table>
     {% else %}
-    <p>Aucun achat disponible.</p>
+    <div class="alert alert-info text-center" role="alert">
+        Aucun achat disponible. Cliquez sur <strong>Essayer la démo</strong> pour voir un exemple.
+    </div>
     {% endif %}
 </div>
 </body>

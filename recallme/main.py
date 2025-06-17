@@ -1,64 +1,127 @@
 import json
+import random
 from pathlib import Path
 
 import pandas as pd
 import requests
 
-
 BASE_DIR = Path(__file__).resolve().parent
-
 
 API_PATH = "/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records"
 API_URL = f"https://data.economie.gouv.fr{API_PATH}"
 
+FALLBACK_RECALLS = [
+    {"name": "Lait entier 1L", "brand": "MarqueX"},
+    {"name": "Yaourt nature", "brand": "DairyBest"},
+    {"name": "Pain de mie", "brand": "Boulange"},
+]
+FALLBACK_PRODUCTS = [
+    {"ProductName": "Baguette", "Brand": "Boulangerie"},
+    {"ProductName": "Eau minérale", "Brand": "Source"},
+    {"ProductName": "Lait demi-écrémé", "Brand": "Lactel"},
+    {"ProductName": "Pâtes Spaghetti", "Brand": "Barilla"},
+    {"ProductName": "Jus d'orange", "Brand": "Tropicana"},
+]
 
-def load_recalls(path="sample_recalls.json", limit=20):
-    """Load recall data from the RappelConso API or a local file."""
+
+def _download_file(url: str, path: Path) -> bool:
+    """Download a file if possible. Return True on success."""
     try:
-        # On tente de récupérer les données depuis l'API
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        path.write_bytes(response.content)
+        return True
+    except Exception as exc:  # pragma: no cover - network errors
+        print(f"Impossible de télécharger {url}: {exc}")
+        return False
+
+
+def load_recalls(path: str = "sample_recalls.json", limit: int = 20):
+    """Load recall data from the API with multiple fallbacks."""
+    try:
         print("Tentative de récupération des données depuis l'API RappelConso...")
         response = requests.get(f"{API_URL}?limit={limit}", timeout=10)
-        response.raise_for_status()  # Lève une exception si le statut est une erreur (4xx ou 5xx)
+        response.raise_for_status()
         data = response.json()
         recalls = []
         for item in data.get("results", []):
-            name = item.get("libelle_commercial") # Utilisation de libelle_commercial pour plus de précision
+            name = item.get("libelle_commercial")
             brand = item.get("marque_produit", "")
             if name:
                 recalls.append({"name": name, "brand": brand})
         print("Données récupérées avec succès depuis l'API.")
         return recalls
-    except Exception as e:
-        # En cas d'échec, on se rabat sur le fichier local
+    except Exception as e:  # pragma: no cover - API error fallback
         print(
             f"Erreur lors de la récupération depuis l'API : {e}. "
             "Utilisation des données locales en repli."
         )
         file_path = BASE_DIR / path
-        with file_path.open("r", encoding="utf-8") as f:
-            return json.load(f)
+        if file_path.exists():
+            with file_path.open("r", encoding="utf-8") as f:
+                return json.load(f)
+        # try to download from GitHub
+        url = (
+            "https://raw.githubusercontent.com/bobthecomputer/recallme/main/"
+            f"recallme/{path}"
+        )
+        if _download_file(url, file_path):
+            with file_path.open("r", encoding="utf-8") as f:
+                return json.load(f)
+        print("Utilisation d'un petit jeu de données intégré.")
+        return FALLBACK_RECALLS
 
 
-def load_purchases(path="purchases.csv"):
+def load_purchases(path: str = "purchases.csv"):
     """Charge les achats de l'utilisateur depuis un fichier CSV."""
     file_path = BASE_DIR / path
-    # On spécifie le type des colonnes pour éviter les erreurs de comparaison
-    return pd.read_csv(file_path, dtype={'name': 'string', 'brand': 'string'})
+    return pd.read_csv(file_path, dtype={"name": "string", "brand": "string"})
+
+
+def generate_demo_purchases(
+    recalls,
+    path: str = "french_top500_products.csv",
+    num_items: int = 20,
+    max_recalled: int = 3,
+):
+    """Generate a random shopping list including a few recalled products."""
+    data_path = BASE_DIR / path
+    if not data_path.exists():
+        url = (
+            "https://raw.githubusercontent.com/bobthecomputer/recallme/main/"
+            f"recallme/{path}"
+        )
+        if not _download_file(url, data_path):
+            print("Utilisation d'une liste de produits intégrée.")
+            df = pd.DataFrame(FALLBACK_PRODUCTS)
+        else:
+            df = pd.read_csv(data_path)
+    else:
+        df = pd.read_csv(data_path)
+
+    purchases = df.sample(n=min(num_items, len(df)))[["ProductName", "Brand"]]
+    purchases.rename(columns={"ProductName": "name", "Brand": "brand"}, inplace=True)
+
+    recall_count = random.randint(0, max_recalled)
+    if recall_count:
+        recall_sample = random.sample(recalls, k=min(recall_count, len(recalls)))
+        recall_df = pd.DataFrame(recall_sample)
+        purchases = pd.concat([purchases, recall_df], ignore_index=True)
+
+    return purchases.sample(frac=1).reset_index(drop=True)
 
 
 def check_recalls(recalls, purchases):
     """Vérifie si des produits achetés correspondent à des rappels."""
     alerts = []
-    # Création d'un set pour une recherche plus rapide
     recalled_products = {
         (str(r["name"]).strip().lower(), str(r["brand"]).strip().lower()) for r in recalls
     }
 
-    for index, purchase in purchases.iterrows():
-        # Normalisation des données pour une comparaison fiable
+    for _, purchase in purchases.iterrows():
         purchase_tuple = (
             str(purchase["name"]).strip().lower(),
-            str(purchase["brand"]).strip().lower()
+            str(purchase["brand"]).strip().lower(),
         )
         if purchase_tuple in recalled_products:
             alerts.append(purchase.to_dict())
