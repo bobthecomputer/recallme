@@ -2,10 +2,10 @@
 
 Ceci est une démonstration simplifiée de l'application **RecallMe**. L'idée est de montrer comment croiser une liste de rappels produits avec vos achats.
 
-Le script `main.py` charge une liste factice de rappels et une liste d'achats depuis `purchases.csv`, puis affiche les produits concernés.
-
-Dans un projet réel, on utiliserait l'API officielle RappelConso, mais cette démo utilise des données locales pour faciliter les tests.
-Les rappels peuvent être récupérés depuis l'URL suivante :
+Le script `main.py` récupère la liste des rappels depuis l'API officielle
+RappelConso (avec repli sur un fichier local en cas d'échec de connexion) puis
+charge vos achats depuis `purchases.csv` afin d'afficher les produits
+concernés. Les rappels proviennent de l'URL suivante :
 
 ```
 https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=20
@@ -23,9 +23,9 @@ https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-g
    ```
 
    Le programme affiche maintenant les 20 derniers rappels connus avant de
-   comparer vos achats avec ces rappels. Pour récupérer les rappels réels depuis
-   l'API, définissez la variable d'environnement `RECALLME_USE_API=1` avant
-   d'exécuter le script.
+   comparer vos achats avec ces rappels. Il tente automatiquement de récupérer
+   les rappels depuis l'API officielle RappelConso et revient aux données
+   locales en cas d'échec.
 
 3. Ouvrir l'interface graphique (facultatif) :
    ```bash
@@ -53,9 +53,6 @@ produits rappelés détectés dans vos achats.
   Une fois le serveur lancé, ouvrez `http://localhost:5000` dans votre navigateur
   pour voir vos achats. Les lignes en rouge indiquent les produits rappelés. Le
   site affiche également les 20 derniers rappels connus.
-
-   Pour obtenir les rappels depuis l'API, exportez
-   `RECALLME_USE_API=1` avant de lancer le serveur.
 
    Cette interface web utilise un petit gabarit HTML et la librairie Bootstrap
    pour offrir un aperçu plus attrayant de vos données.

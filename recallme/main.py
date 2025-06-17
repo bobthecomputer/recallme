@@ -1,5 +1,4 @@
 import json
-import os
 from pathlib import Path
 
 import pandas as pd
@@ -14,8 +13,8 @@ API_URL = f"https://data.economie.gouv.fr{API_PATH}"
 
 
 def load_recalls(path="sample_recalls.json", limit=20):
-    """Load recall data from local file or the RappelConso API."""
-    if os.getenv("RECALLME_USE_API", "").lower() in {"1", "true", "yes"}:
+    """Load recall data from the RappelConso API or a local file."""
+    try:
         response = requests.get(f"{API_URL}?limit={limit}", timeout=10)
         response.raise_for_status()
         data = response.json()
@@ -26,10 +25,10 @@ def load_recalls(path="sample_recalls.json", limit=20):
             if name:
                 recalls.append({"name": name, "brand": brand})
         return recalls
-
-    file_path = BASE_DIR / path
-    with file_path.open("r", encoding="utf-8") as f:
-        return json.load(f)
+    except Exception:
+        file_path = BASE_DIR / path
+        with file_path.open("r", encoding="utf-8") as f:
+            return json.load(f)
 
 
 def load_purchases(path="purchases.csv"):
