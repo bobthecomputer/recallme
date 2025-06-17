@@ -51,6 +51,8 @@ produits rappelés détectés dans vos achats.
    ```bash
    python app.py
    ```
+   Vous pouvez également lancer le script depuis n'importe quel dossier en
+   indiquant son chemin complet ; il s'adaptera automatiquement.
   Une fois le serveur lancé, ouvrez `http://localhost:5000` dans votre navigateur
   pour voir vos achats. Les lignes en rouge indiquent les produits rappelés. Le
   site affiche également les 20 derniers rappels connus.
