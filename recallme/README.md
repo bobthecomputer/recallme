@@ -51,9 +51,17 @@ produits rappelés détectés dans vos achats.
     ```
     Vous pouvez également lancer le script depuis n'importe quel dossier en
     indiquant son chemin complet ; il s'adaptera automatiquement.
-    Une fois le serveur lancé, ouvrez `http://localhost:5000` dans votre navigateur
-    pour voir vos achats. Les lignes en rouge indiquent les produits rappelés. Le
-    site affiche également les 20 derniers rappels connus.
+    Une fois le serveur lancé, ouvrez `http://localhost:5000` dans votre navigateur.
+    Par défaut aucune liste d'achats n'est affichée : cliquez sur le bouton
+    **Essayer la démo** pour générer un exemple de courses. Les lignes en rouge
+    indiquent les produits rappelés. Le site affiche également les 20 derniers
+    rappels connus.
+
+    Un bouton "Essayer la démo" permet de générer aléatoirement une liste
+    d'achats (20 articles par défaut) à partir du fichier
+    `french_top500_products.csv`. Cette liste inclut entre 0 et 3 produits
+    rappelés pour visualiser le fonctionnement. Vous pouvez ajuster le nombre
+    d'articles en passant `n=40` ou tout autre chiffre dans l'URL `/demo`.
 
     Cette interface web utilise un petit gabarit HTML et la librairie Bootstrap
     pour offrir un aperçu plus attrayant de vos données.
