@@ -1,0 +1,501 @@
+ProductID,ProductName,Brand,Manufacturer,Category,SubCategory,EAN13,Price_EUR,Unit,DistributorName,DistributorSIRET
+1,Eau de Source,Cristaline,GIE Sources Alma,Alimentation,Boissons non alcoolisées,3274080001005,1.45,Pack 6x1.5L,E.Leclerc,48747091700014
+2,Pastis de Marseille,Ricard,Pernod Ricard,Alimentation,Boissons alcoolisées,3047100030605,21.5,Bouteille 1L,Carrefour,34513048800093
+3,Original Taste,Coca-Cola,The Coca-Cola Company,Alimentation,Boissons non alcoolisées,5449000000996,1.85,Bouteille 1.75L,Intermarché,78916932300019
+4,Pâte à tartiner,Nutella,Ferrero,Alimentation,Produits sucrés,3017620422003,5.9,Pot 1kg,Auchan,41040901500015
+5,Spaghetti N. 5,Barilla,Barilla Group,Alimentation,Céréales et produits de boulangerie,8076800195057,1.05,Boîte 500g,Carrefour,34513048800093
+6,Pâtes Coquillettes,Panzani,Ebro Foods,Alimentation,Céréales et produits de boulangerie,3038350102509,1.1,Sachet 500g,Système U,3048120000011
+7,Le Véritable Petit Beurre,LU,Mondelez International,Alimentation,Céréales et produits de boulangerie,3017760500693,1.99,Paquet 200g,Intermarché,78916932300019
+8,Yaourt Nature,Danone,Danone,Alimentation,Lait et produits laitiers,3033490004521,1.5,Pack 4x125g,Auchan,41040901500015
+9,Lait Demi-Écrémé,Lactel,Lactalis,Alimentation,Lait et produits laitiers,3533630900011,5.7,Pack 6x1L,E.Leclerc,48747091700014
+10,Lessive Liquide Original,Ariel,Procter & Gamble,Entretien et nettoyage,Lessives,8001090764126,12.9,Flacon 1.55L (31 lavages),Intermarché,78916932300019
+11,Lessive Liquide,Le Chat,Henkel,Entretien et nettoyage,Lessives,3178041334932,11.5,Flacon 2L (40 lavages),Carrefour,34513048800093
+12,Tablette Chocolat au Lait,Milka,Mondelez International,Alimentation,Produits sucrés,3045140105502,1.1,Tablette 100g,Lidl,34326300400011
+13,Café Moulu L'Or Absolu,L'Or,JDE Peet's,Alimentation,"Cacao, café et thé",3228470062008,3.49,Paquet 250g,Système U,3048120000011
+14,Petits Pois extra-fins,Bonduelle,Bonduelle,Alimentation,Fruits et légumes,3083681012061,1.8,Conserve 400g,Auchan,41040901500015
+15,Beurre Doux Gastronomique,Président,Lactalis,Alimentation,Lait et produits laitiers,3258021010046,3.2,Plaquette 250g,Carrefour,34513048800093
+16,Dentifrice Protection Caries,Elmex,Colgate-Palmolive,Hygiène-Beauté,Hygiène bucco-dentaire,7610108000985,4.15,Tube 75ml,E.Leclerc,48747091700014
+17,Saucisson Sec Pur Porc,Monique Ranou,Agromousquetaires,Alimentation,Viandes,3250390002235,4.5,Pièce 250g,Intermarché,78916932300019
+18,Yaourt aux Fruits,Pâturages,Agromousquetaires,Alimentation,Lait et produits laitiers,3250391306002,1.95,Pack 8x125g,Intermarché,78916932300019
+19,Jus d'Orange sans pulpe,Paquito,Agromousquetaires,Alimentation,Boissons non alcoolisées,3250390312006,1.75,Brique 1L,Intermarché,78916932300019
+20,Couches Bébé Taille 4,Pommette,Agromousquetaires,Bébés-Enfants,Couches et changes,3250391836509,8.9,Paquet x48,Intermarché,78916932300019
+21,Madeleines longues,Chabrior,Agromousquetaires,Alimentation,Céréales et produits de boulangerie,3250390001238,2.1,Sachet 500g,Intermarché,78916932300019
+22,Steak Haché Pur Bœuf 15% MG,Jean Rozé,Agromousquetaires,Alimentation,Viandes,3250390005670,6.5,Barquette 4x100g,Intermarché,78916932300019
+23,Riz Long Grain,Taureau Ailé,Lustucru Premium,Alimentation,Céréales et produits de boulangerie,3038352303002,2.8,Sachet 1kg,E.Leclerc,48747091700014
+24,Chips saveur Paprika,Lay's,PepsiCo,Alimentation,Plats préparés et snacks,3168930004944,1.9,Sachet 135g,Carrefour,34513048800093
+25,Savon de Marseille,Le Petit Marseillais,Johnson & Johnson,Hygiène-Beauté,Hygiène corporelle,3574661588219,2.5,Pain 200g,Auchan,41040901500015
+26,Déodorant Atomiseur Original,Dove,Unilever,Hygiène-Beauté,Hygiène corporelle,8710908360699,4.2,Spray 200ml,Monoprix,55201802000013
+27,Liquide Vaisselle Citron,Paic,Colgate-Palmolive,Entretien et nettoyage,Produits vaisselle,8718951381398,2.1,Flacon 750ml,Système U,3048120000011
+28,Piles Alcalines AA,Duracell,Berkshire Hathaway,Maison et Bricolage,Piles et batteries,5000394075137,7.5,Pack x8,Bricomarché,38909735700015
+29,Huile d'olive vierge extra,Puget,Lesieur (Avril),Alimentation,Huiles et matières grasses,3248830000109,8.9,Bouteille 75cl,Intermarché,78916932300019
+30,Thon Albacore au naturel,Petit Navire,Thai Union Group,Alimentation,Produits de la pêche et d'aquaculture,3019081249051,4.3,Lot 3x80g,Carrefour,34513048800093
+31,Brosse à dents medium,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,9367637311475,2.38,Flacon 250ml,E.Leclerc,48747091700014
+32,Huile d'olive vierge extra,Puget,Puget Group,Alimentation,Huiles et matières grasses,1206758522439,7.54,Bouteille 75cl,Auchan,41040901500015
+33,Boisson énergisante,Coca-Cola,Coca-Cola Group,Alimentation,Boissons non alcoolisées,3723458215457,1.17,Bouteille 1.5L,Bricomarché,38909735700015
+34,Pizza 4 Fromages,St Michel,St Michel Group,Alimentation,Plats préparés et snacks,3097440025806,2.23,Sachet 150g,Intermarché,78916932300019
+35,Lessive Liquide Original,Persil,Persil Group,Entretien et nettoyage,Lessives,4607665811789,10.8,Flacon 1.5L,Auchan,41040901500015
+36,Steak Haché Pur Bœuf 15% MG,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,9525000287271,7.88,Pièce 300g,Lidl,34326300400011
+37,Brosse à dents medium,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,4283922874898,1.92,Flacon 250ml,Carrefour,34513048800093
+38,Petits Pois extra-fins,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,8408786107463,2.94,Conserve 400g,Auchan,41040901500015
+39,Cocktail de fruits,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,5564117460911,1.96,Conserve 800g,Intermarché,78916932300019
+40,Pâte à tartiner,Haribo,Haribo Group,Alimentation,Produits sucrés,1420630058735,3.38,Pot 1kg,Auchan,41040901500015
+41,Pain de mie,Barilla,Barilla Group,Alimentation,Céréales et produits de boulangerie,7586963452849,2.88,Paquet 200g,Auchan,41040901500015
+42,Piles Alcalines AA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,8116060967749,10.55,Pack x4,Monoprix,55201802000013
+43,Yaourt Nature,Candia,Candia Group,Alimentation,Lait et produits laitiers,7319416812675,2.43,Pack 6x1L,Auchan,41040901500015
+44,Chips saveur Paprika,St Michel,St Michel Group,Alimentation,Plats préparés et snacks,7698384582071,2.54,Sachet 150g,Carrefour,34513048800093
+45,Tablette Chocolat au Lait,Nutella,Nutella Group,Alimentation,Produits sucrés,6259978426037,1.33,Tablette 100g,Bricomarché,38909735700015
+46,Pizza 4 Fromages,St Michel,St Michel Group,Alimentation,Plats préparés et snacks,5719506394203,2.99,Barquette 350g,Système U,3048120000011
+47,Capsules 3en1,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,5967060981043,11.82,Capsules x30,E.Leclerc,48747091700014
+48,Pain de mie,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,3967566531805,2.93,Paquet 200g,Carrefour,34513048800093
+49,Piles Alcalines AA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,5085303666103,5.78,Pack x4,Bricomarché,38909735700015
+50,Yaourt aux Fruits,Danone,Danone Group,Alimentation,Lait et produits laitiers,9622623448802,2.6,Pack 6x1L,E.Leclerc,48747091700014
+51,Lait Demi-Écrémé,Candia,Candia Group,Alimentation,Lait et produits laitiers,4308054645861,2.46,Pack 4x125g,Intermarché,78916932300019
+52,Thon Albacore au naturel,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,0986619606256,2.53,Lot 3x80g,Bricomarché,38909735700015
+53,Huile d'olive vierge extra,Puget,Puget Group,Alimentation,Huiles et matières grasses,9943316980400,5.01,Bouteille 1L,Carrefour,34513048800093
+54,Steak Haché Pur Bœuf 15% MG,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,3681471541277,6.4,Barquette 4x100g,Lidl,34326300400011
+55,Sardines à l'huile,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,6010783532609,2.35,Boîte 120g,Auchan,41040901500015
+56,Thon Albacore au naturel,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,0216780583507,2.33,Lot 3x80g,E.Leclerc,48747091700014
+57,Lait Demi-Écrémé,Lactel,Lactel Group,Alimentation,Lait et produits laitiers,6765950047737,3.26,Pack 4x125g,Carrefour,34513048800093
+58,Pain de mie,Barilla,Barilla Group,Alimentation,Céréales et produits de boulangerie,0919805346117,1.24,Boîte 500g,Auchan,41040901500015
+59,Lessive Poudre,Skip,Skip Group,Entretien et nettoyage,Lessives,9367854196756,10.25,Capsules x30,Carrefour,34513048800093
+60,Yaourt aux Fruits,Andros,Andros Group,Alimentation,Lait et produits laitiers,7595526279847,4.65,Plaquette 250g,Auchan,41040901500015
+61,Gel Douche Surgras,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,1189610804914,2.18,Spray 200ml,Auchan,41040901500015
+62,Thé Vert Menthe,L'Or,L'Or Group,Alimentation,"Cacao, café et thé",9465981398941,3.2,Boîte 200g,E.Leclerc,48747091700014
+63,Jambon Cuit Supérieur,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,6526623164201,7.1,Barquette 4x100g,Monoprix,55201802000013
+64,Déodorant Atomiseur Original,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,4064418226298,2.17,Flacon 250ml,Monoprix,55201802000013
+65,Liquide Vaisselle Citron,Paic,Paic Group,Entretien et nettoyage,Produits vaisselle,7679505562844,2.5,Flacon 750ml,Monoprix,55201802000013
+66,Fromage Blanc,Andros,Andros Group,Alimentation,Lait et produits laitiers,0109848038869,1.6,Pack 6x1L,E.Leclerc,48747091700014
+67,Huile de tournesol,Lesieur,Lesieur Group,Alimentation,Huiles et matières grasses,0126588059244,7.2,Bouteille 1L,E.Leclerc,48747091700014
+68,Biscottes,LU,LU Group,Alimentation,Céréales et produits de boulangerie,7227597690114,2.49,Sachet 500g,Auchan,41040901500015
+69,Huile de tournesol,Lesieur,Lesieur Group,Alimentation,Huiles et matières grasses,7220419467949,5.75,Bouteille 1L,Lidl,34326300400011
+70,Riz Cantonais,Ben's Original,Ben's Original Group,Alimentation,Plats préparés et snacks,6909736332154,2.92,Barquette 350g,Carrefour,34513048800093
+71,Café Moulu L'Or Absolu,Nescafé,Nescafé Group,Alimentation,"Cacao, café et thé",7227049118852,3.61,Paquet 250g,Lidl,34326300400011
+72,Bonbons gélifiés,Haribo,Haribo Group,Alimentation,Produits sucrés,3936185746365,2.51,Tablette 100g,Lidl,34326300400011
+73,Cacao en poudre,L'Or,L'Or Group,Alimentation,"Cacao, café et thé",7728059775900,4.79,Boîte 20 sachets,Intermarché,78916932300019
+74,Sardines à l'huile,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,5423269153730,2.92,Lot 3x80g,Lidl,34326300400011
+75,Huile d'olive vierge extra,Puget,Puget Group,Alimentation,Huiles et matières grasses,8016611382949,6.12,Bouteille 1L,Système U,3048120000011
+76,Liquide Vaisselle Citron,Mir,Mir Group,Entretien et nettoyage,Produits vaisselle,6574168848308,2.89,Flacon 750ml,Carrefour,34513048800093
+77,Saucisson Sec Pur Porc,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,7364792459761,6.4,Pièce 300g,Carrefour,34513048800093
+78,Brosse à dents medium,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,7693640197938,2.27,Tube 75ml,Auchan,41040901500015
+79,Couches Bébé Taille 4,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,5738128983060,16.74,Paquet x56,Carrefour,34513048800093
+80,Lessive Poudre,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,8692983552502,12.38,Capsules x30,Système U,3048120000011
+81,Steak Haché Pur Bœuf 15% MG,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,4044928789636,8.9,Barquette 4x100g,Bricomarché,38909735700015
+82,Dentifrice Protection Caries,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,3139189210102,2.13,Pain 200g,Carrefour,34513048800093
+83,Pâtes Coquillettes,Harrys,Harrys Group,Alimentation,Céréales et produits de boulangerie,6870128201818,2.97,Sachet 500g,Monoprix,55201802000013
+84,Huile de tournesol,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,8875875883612,9.79,Bouteille 1L,Lidl,34326300400011
+85,Savon de Marseille,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,3909925325007,1.71,Pain 200g,Lidl,34326300400011
+86,Piles Alcalines AA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,1815903347942,6.12,Pack x8,Monoprix,55201802000013
+87,Jambon Cuit Supérieur,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,4453832529793,8.9,Barquette 4x100g,Carrefour,34513048800093
+88,Cocktail de fruits,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,0422845591619,2.01,Conserve 400g,E.Leclerc,48747091700014
+89,Huile d'olive vierge extra,Lesieur,Lesieur Group,Alimentation,Huiles et matières grasses,5120169698803,9.59,Bouteille 1L,Monoprix,55201802000013
+90,Petits Pois extra-fins,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,7785709010606,1.08,Conserve 800g,E.Leclerc,48747091700014
+91,Déodorant Atomiseur Original,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,6344022479104,4.11,Spray 200ml,Monoprix,55201802000013
+92,Pastilles Lave-Vaisselle,Sun,Sun Group,Entretien et nettoyage,Produits vaisselle,8465655426070,2.8,Flacon 750ml,Monoprix,55201802000013
+93,Déodorant Atomiseur Original,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,5642302515032,4.66,Flacon 250ml,Système U,3048120000011
+94,Eau de Source,Badoit,Badoit Group,Alimentation,Boissons non alcoolisées,6905659156624,1.47,Bouteille 1.75L,Bricomarché,38909735700015
+95,Huile de tournesol,Puget,Puget Group,Alimentation,Huiles et matières grasses,8512690713372,4.61,Bouteille 75cl,Lidl,34326300400011
+96,Jambon Cuit Supérieur,Jean Rozé,Jean Rozé Group,Alimentation,Viandes,1074724365492,3.38,Pièce 300g,Auchan,41040901500015
+97,Café Moulu L'Or Absolu,L'Or,L'Or Group,Alimentation,"Cacao, café et thé",2945022434625,5.8,Boîte 20 sachets,Carrefour,34513048800093
+98,Thon Albacore au naturel,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,9104300387913,3.42,Boîte 120g,Système U,3048120000011
+99,Cidre Brut,Bavaria 8.6,Bavaria 8.6 Group,Alimentation,Boissons alcoolisées,5407649333615,18.77,Bouteille 1L,Lidl,34326300400011
+100,Thon Albacore au naturel,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,1412449083305,4.59,Boîte 120g,Lidl,34326300400011
+101,Riz Cantonais,St Michel,St Michel Group,Alimentation,Plats préparés et snacks,5215844606836,2.32,Barquette 350g,Lidl,34326300400011
+102,Bière blonde,Ricard,Ricard Group,Alimentation,Boissons alcoolisées,0129993214918,17.46,Canette 50cl,E.Leclerc,48747091700014
+103,Fromage Blanc,Andros,Andros Group,Alimentation,Lait et produits laitiers,6017108940866,1.87,Pack 4x125g,Système U,3048120000011
+104,Piles Alcalines AA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,7351546638299,8.82,Pack x8,E.Leclerc,48747091700014
+105,Petits Pois extra-fins,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,0125022577559,1.01,Conserve 800g,Bricomarché,38909735700015
+106,Piles Rechargeables AAA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,4457634932133,11.53,Pack x4,Lidl,34326300400011
+107,Thé Vert Menthe,Lipton,Lipton Group,Alimentation,"Cacao, café et thé",5313531771673,2.45,Boîte 20 sachets,Système U,3048120000011
+108,Thé glacé,Cristaline,Cristaline Group,Alimentation,Boissons non alcoolisées,4397515791988,2.44,Canette 33cl,Bricomarché,38909735700015
+109,Yaourt aux Fruits,Yoplait,Yoplait Group,Alimentation,Lait et produits laitiers,9879974988901,5.65,Plaquette 250g,E.Leclerc,48747091700014
+110,Lessive Liquide Original,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,3733201055025,11.91,Flacon 1.5L,Monoprix,55201802000013
+111,Haricots verts,D'aucy,D'aucy Group,Alimentation,Fruits et légumes,7320167722670,2.62,Conserve 800g,Auchan,41040901500015
+112,Galettes,Panzani,Panzani Group,Alimentation,Céréales et produits de boulangerie,0363003703218,1.65,Paquet 200g,Intermarché,78916932300019
+113,Vin rouge,Ricard,Ricard Group,Alimentation,Boissons alcoolisées,1040516289710,11.46,Bouteille 1L,E.Leclerc,48747091700014
+114,Bière blonde,Heineken,Heineken Group,Alimentation,Boissons alcoolisées,4244595692080,5.42,Canette 50cl,Lidl,34326300400011
+115,Whisky,Jack Daniels,Jack Daniels Group,Alimentation,Boissons alcoolisées,0963783595722,5.9,Pack 6x25cl,Intermarché,78916932300019
+116,Chips saveur Paprika,Lay's,Lay's Group,Alimentation,Plats préparés et snacks,5432591032811,3.88,Sachet 150g,E.Leclerc,48747091700014
+117,Galettes,LU,LU Group,Alimentation,Céréales et produits de boulangerie,3071344646978,1.72,Paquet 200g,Système U,3048120000011
+118,Huile de tournesol,Puget,Puget Group,Alimentation,Huiles et matières grasses,1909762180694,8.56,Bouteille 1L,Auchan,41040901500015
+119,Pastis de Marseille,Desperados,Desperados Group,Alimentation,Boissons alcoolisées,2614077190137,23.19,Bouteille 75cl,Intermarché,78916932300019
+120,Huile de tournesol,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,9985128880370,7.84,Bouteille 1L,Carrefour,34513048800093
+121,Pastilles Lave-Vaisselle,Sun,Sun Group,Entretien et nettoyage,Produits vaisselle,4164210243568,2.2,Tablettes x30,Auchan,41040901500015
+122,Couches Bébé Taille 4,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,1526152341130,13.86,Paquet x56,Bricomarché,38909735700015
+123,Huile de tournesol,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,6009434686778,7.5,Bouteille 1L,Lidl,34326300400011
+124,Biscottes,Panzani,Panzani Group,Alimentation,Céréales et produits de boulangerie,6181869848577,2.33,Sachet 500g,Bricomarché,38909735700015
+125,Whisky,1664,1664 Group,Alimentation,Boissons alcoolisées,1635975895079,16.66,Bouteille 75cl,Carrefour,34513048800093
+126,Biscottes,Panzani,Panzani Group,Alimentation,Céréales et produits de boulangerie,0683982883801,2.82,Boîte 500g,Lidl,34326300400011
+127,Couches Bébé Taille 4,Huggies,Huggies Group,Bébés-Enfants,Couches et changes,0602103537584,10.44,Paquet x56,E.Leclerc,48747091700014
+128,Crème fraîche,Lactel,Lactel Group,Alimentation,Lait et produits laitiers,2350624511054,2.63,Plaquette 250g,Monoprix,55201802000013
+129,Brosse à dents medium,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,2971161894082,2.86,Pain 200g,Intermarché,78916932300019
+130,Piles Alcalines AA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,8005947622317,6.46,Pack x4,Bricomarché,38909735700015
+131,Pastilles Lave-Vaisselle,Paic,Paic Group,Entretien et nettoyage,Produits vaisselle,6112323474391,3.9,Tablettes x30,Bricomarché,38909735700015
+132,Cocktail de fruits,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,2186579599805,1.43,Conserve 800g,Bricomarché,38909735700015
+133,Thé Vert Menthe,L'Or,L'Or Group,Alimentation,"Cacao, café et thé",5813367372261,4.09,Paquet 250g,Auchan,41040901500015
+134,Lingettes Bébé,Huggies,Huggies Group,Bébés-Enfants,Couches et changes,7423134682936,8.08,Paquet x56,Auchan,41040901500015
+135,Boisson énergisante,Cristaline,Cristaline Group,Alimentation,Boissons non alcoolisées,8338895345800,1.27,Bouteille 1.5L,E.Leclerc,48747091700014
+136,Bonbons gélifiés,Milka,Milka Group,Alimentation,Produits sucrés,3991681958308,5.74,Tablette 100g,Bricomarché,38909735700015
+137,Haricots verts,D'aucy,D'aucy Group,Alimentation,Fruits et légumes,1138154138795,1.9,Conserve 400g,Carrefour,34513048800093
+138,Déodorant Atomiseur Original,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,7399347865216,4.37,Tube 75ml,Bricomarché,38909735700015
+139,Liquide Vaisselle Citron,Sun,Sun Group,Entretien et nettoyage,Produits vaisselle,9031814713344,1.59,Flacon 750ml,Lidl,34326300400011
+140,Thon Albacore au naturel,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,4204930756570,4.43,Boîte 120g,Lidl,34326300400011
+141,Pastis de Marseille,Jack Daniels,Jack Daniels Group,Alimentation,Boissons alcoolisées,2176010002636,16.31,Pack 6x25cl,Système U,3048120000011
+142,Capsules 3en1,Ariel,Ariel Group,Entretien et nettoyage,Lessives,6782726726108,14.15,Flacon 1.5L,Monoprix,55201802000013
+143,Savon de Marseille,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,3989433201796,2.65,Pain 200g,Intermarché,78916932300019
+144,Brosse à dents medium,Colgate,Colgate Group,Hygiène-Beauté,Hygiène bucco-dentaire,1637466008913,4.71,Tube 75ml,Lidl,34326300400011
+145,Riz Cantonais,Ben's Original,Ben's Original Group,Alimentation,Plats préparés et snacks,9761526978341,3.9,Barquette 350g,Monoprix,55201802000013
+146,Lessive Poudre,Persil,Persil Group,Entretien et nettoyage,Lessives,4338549957674,6.95,Flacon 1.5L,Monoprix,55201802000013
+147,Pâtes Coquillettes,Harrys,Harrys Group,Alimentation,Céréales et produits de boulangerie,5103285236111,2.86,Boîte 500g,E.Leclerc,48747091700014
+148,Yaourt aux Fruits,Président,Président Group,Alimentation,Lait et produits laitiers,5400456609041,4.87,Pack 6x1L,Système U,3048120000011
+149,Thé Vert Menthe,L'Or,L'Or Group,Alimentation,"Cacao, café et thé",7477720823715,3.77,Boîte 20 sachets,Monoprix,55201802000013
+150,Riz Cantonais,St Michel,St Michel Group,Alimentation,Plats préparés et snacks,5752167260777,4.25,Sachet 150g,Auchan,41040901500015
+151,Riz Cantonais,Ben's Original,Ben's Original Group,Alimentation,Plats préparés et snacks,6785374321541,3.01,Barquette 350g,E.Leclerc,48747091700014
+152,Vin rouge,1664,1664 Group,Alimentation,Boissons alcoolisées,6251772658720,17.57,Bouteille 1L,Auchan,41040901500015
+153,Biscottes,Panzani,Panzani Group,Alimentation,Céréales et produits de boulangerie,3829936733069,3.0,Paquet 200g,E.Leclerc,48747091700014
+154,Gel Douche Surgras,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,1537794216601,2.7,Pain 200g,E.Leclerc,48747091700014
+155,Thé Vert Menthe,Nescafé,Nescafé Group,Alimentation,"Cacao, café et thé",1992900542935,4.31,Paquet 250g,Système U,3048120000011
+156,Jambon Cuit Supérieur,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,3433248304925,7.57,Barquette 4x100g,Lidl,34326300400011
+157,Galettes,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,3385990933833,2.03,Boîte 500g,Auchan,41040901500015
+158,Gel Douche Surgras,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,0227432273509,3.49,Flacon 250ml,Intermarché,78916932300019
+159,Lessive Liquide Original,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,5293285607391,7.71,Flacon 1.5L,Monoprix,55201802000013
+160,Piles Alcalines AA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,0771013434778,6.36,Pack x8,Lidl,34326300400011
+161,Gel Douche Surgras,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,2100145528907,2.34,Spray 200ml,Bricomarché,38909735700015
+162,Maïs doux,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,2558269874262,1.35,Conserve 800g,Système U,3048120000011
+163,Couches Bébé Taille 4,Huggies,Huggies Group,Bébés-Enfants,Couches et changes,5613250468466,12.54,Paquet x56,Intermarché,78916932300019
+164,Lingettes Bébé,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,8540408266308,9.1,Paquet x56,E.Leclerc,48747091700014
+165,Dentifrice Protection Caries,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,2602278925191,2.97,Pain 200g,Carrefour,34513048800093
+166,Steak Haché Pur Bœuf 15% MG,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,9086044067965,8.15,Barquette 4x100g,Intermarché,78916932300019
+167,Thon Albacore au naturel,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,8790904768138,2.66,Boîte 120g,Carrefour,34513048800093
+168,Liquide Vaisselle Citron,Sun,Sun Group,Entretien et nettoyage,Produits vaisselle,9868084971897,3.53,Flacon 750ml,Bricomarché,38909735700015
+169,Steak Haché Pur Bœuf 15% MG,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,4901614989254,6.56,Pièce 300g,Lidl,34326300400011
+170,Chips saveur Paprika,Lay's,Lay's Group,Alimentation,Plats préparés et snacks,3039696746043,2.37,Barquette 350g,Bricomarché,38909735700015
+171,Steak Haché Pur Bœuf 15% MG,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,0123577701672,8.16,Barquette 4x100g,E.Leclerc,48747091700014
+172,Biscuits fourrés,M&M's,M&M's Group,Alimentation,Produits sucrés,5855282869686,4.55,Tablette 100g,Carrefour,34513048800093
+173,Huile d'olive vierge extra,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,0979790325924,7.69,Bouteille 1L,Intermarché,78916932300019
+174,Déodorant Atomiseur Original,Dove,Dove Group,Hygiène-Beauté,Hygiène corporelle,5665105199148,4.33,Flacon 250ml,Système U,3048120000011
+175,Chips saveur Paprika,Pringles,Pringles Group,Alimentation,Plats préparés et snacks,3233612085777,2.08,Sachet 150g,Intermarché,78916932300019
+176,Dentifrice Protection Caries,Colgate,Colgate Group,Hygiène-Beauté,Hygiène bucco-dentaire,3711700859832,4.52,Flacon 250ml,Auchan,41040901500015
+177,Lessive Poudre,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,4922492646138,8.88,Capsules x30,Auchan,41040901500015
+178,Couches Bébé Taille 4,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,8871790634131,15.75,Paquet x56,Monoprix,55201802000013
+179,Sardines à l'huile,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,9916506801076,4.69,Lot 3x80g,Système U,3048120000011
+180,Couches Bébé Taille 4,Huggies,Huggies Group,Bébés-Enfants,Couches et changes,0815215005142,5.05,Paquet x56,Système U,3048120000011
+181,Couches Bébé Taille 4,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,8033440510404,5.78,Paquet x56,Auchan,41040901500015
+182,Brosse à dents medium,Elmex,Elmex Group,Hygiène-Beauté,Hygiène bucco-dentaire,5283041479959,4.09,Spray 200ml,Lidl,34326300400011
+183,Thé glacé,Oasis,Oasis Group,Alimentation,Boissons non alcoolisées,1384729045757,0.82,Bouteille 1.75L,Intermarché,78916932300019
+184,Sardines à l'huile,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,8448703932488,2.25,Boîte 120g,Système U,3048120000011
+185,Piles Rechargeables AAA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,5088869962474,7.17,Pack x8,Bricomarché,38909735700015
+186,Eau de Source,Badoit,Badoit Group,Alimentation,Boissons non alcoolisées,1949771512833,0.6,Bouteille 1.75L,Auchan,41040901500015
+187,Whisky,Desperados,Desperados Group,Alimentation,Boissons alcoolisées,5587516489475,11.06,Pack 6x25cl,Bricomarché,38909735700015
+188,Pastilles Lave-Vaisselle,Paic,Paic Group,Entretien et nettoyage,Produits vaisselle,2655168663192,3.69,Flacon 750ml,Système U,3048120000011
+189,Dentifrice Protection Caries,Elmex,Elmex Group,Hygiène-Beauté,Hygiène bucco-dentaire,4056260968716,3.13,Pain 200g,Système U,3048120000011
+190,Biscuits fourrés,Milka,Milka Group,Alimentation,Produits sucrés,7236617132626,4.72,Pot 1kg,E.Leclerc,48747091700014
+191,Café Moulu L'Or Absolu,Nescafé,Nescafé Group,Alimentation,"Cacao, café et thé",1389995913748,5.51,Boîte 200g,Auchan,41040901500015
+192,Chips saveur Paprika,Pringles,Pringles Group,Alimentation,Plats préparés et snacks,3229420428295,2.43,Sachet 150g,Bricomarché,38909735700015
+193,Pastis de Marseille,Ricard,Ricard Group,Alimentation,Boissons alcoolisées,7716670505167,14.43,Canette 50cl,Intermarché,78916932300019
+194,Yaourt aux Fruits,Yoplait,Yoplait Group,Alimentation,Lait et produits laitiers,4053286081580,5.93,Plaquette 250g,Carrefour,34513048800093
+195,Couches Bébé Taille 4,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,1056166667600,7.02,Paquet x56,Intermarché,78916932300019
+196,Sardines à l'huile,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,3213305659607,3.47,Lot 3x80g,E.Leclerc,48747091700014
+197,Piles Alcalines AA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,2240841558003,6.89,Pack x4,Bricomarché,38909735700015
+198,Sardines à l'huile,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,4462460554978,4.03,Lot 3x80g,Carrefour,34513048800093
+199,Cocktail de fruits,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,7574256099826,2.5,Conserve 400g,Système U,3048120000011
+200,Brosse à dents medium,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,6181624136369,3.4,Pain 200g,Carrefour,34513048800093
+201,Vin rouge,Jack Daniels,Jack Daniels Group,Alimentation,Boissons alcoolisées,8550535060793,9.43,Bouteille 1L,Lidl,34326300400011
+202,Thon Albacore au naturel,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,1066670664347,2.66,Lot 3x80g,E.Leclerc,48747091700014
+203,Dentifrice Protection Caries,Elmex,Elmex Group,Hygiène-Beauté,Hygiène bucco-dentaire,4210777864163,4.32,Tube 75ml,Monoprix,55201802000013
+204,Jambon Cuit Supérieur,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,7067255881276,8.09,Barquette 4x100g,Système U,3048120000011
+205,Brosse à dents medium,Elmex,Elmex Group,Hygiène-Beauté,Hygiène bucco-dentaire,3190520621148,3.62,Spray 200ml,Auchan,41040901500015
+206,Liquide Vaisselle Citron,Sun,Sun Group,Entretien et nettoyage,Produits vaisselle,9422636585606,3.77,Flacon 750ml,Système U,3048120000011
+207,Piles Alcalines AA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,6324735351294,4.3,Pack x4,Lidl,34326300400011
+208,Café Moulu L'Or Absolu,Lipton,Lipton Group,Alimentation,"Cacao, café et thé",5139699541688,3.02,Boîte 200g,Monoprix,55201802000013
+209,Thé glacé,Oasis,Oasis Group,Alimentation,Boissons non alcoolisées,2349449511806,0.81,Pack 6x1.5L,Bricomarché,38909735700015
+210,Haricots verts,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,2458094842965,2.51,Conserve 400g,Intermarché,78916932300019
+211,Dentifrice Protection Caries,Colgate,Colgate Group,Hygiène-Beauté,Hygiène bucco-dentaire,4593141685640,3.23,Tube 75ml,Bricomarché,38909735700015
+212,Pastilles Lave-Vaisselle,Paic,Paic Group,Entretien et nettoyage,Produits vaisselle,0235750440817,2.79,Tablettes x30,Système U,3048120000011
+213,Haricots verts,D'aucy,D'aucy Group,Alimentation,Fruits et légumes,6926504189086,2.95,Conserve 800g,Auchan,41040901500015
+214,Eau Minérale,Cristaline,Cristaline Group,Alimentation,Boissons non alcoolisées,8912744822959,2.05,Canette 33cl,Lidl,34326300400011
+215,Haricots verts,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,4359747059779,2.84,Conserve 400g,Carrefour,34513048800093
+216,Chips saveur Paprika,St Michel,St Michel Group,Alimentation,Plats préparés et snacks,2897031701949,2.87,Sachet 150g,Auchan,41040901500015
+217,Café Moulu L'Or Absolu,Nescafé,Nescafé Group,Alimentation,"Cacao, café et thé",5251307006317,5.79,Boîte 200g,Monoprix,55201802000013
+218,Huile d'olive vierge extra,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,5144608156082,9.3,Bouteille 75cl,Monoprix,55201802000013
+219,Maïs doux,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,5283195578904,2.19,Conserve 800g,Intermarché,78916932300019
+220,Thé Vert Menthe,Lipton,Lipton Group,Alimentation,"Cacao, café et thé",0675794469298,5.99,Boîte 200g,E.Leclerc,48747091700014
+221,Savon de Marseille,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,8508690760607,4.89,Pain 200g,Carrefour,34513048800093
+222,Thon Albacore au naturel,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,2434901655942,3.28,Boîte 120g,Lidl,34326300400011
+223,Saucisson Sec Pur Porc,Jean Rozé,Jean Rozé Group,Alimentation,Viandes,9537854410576,6.69,Barquette 4x100g,Intermarché,78916932300019
+224,Whisky,Bavaria 8.6,Bavaria 8.6 Group,Alimentation,Boissons alcoolisées,0504317788892,6.58,Bouteille 1L,E.Leclerc,48747091700014
+225,Spaghetti,Harrys,Harrys Group,Alimentation,Céréales et produits de boulangerie,4730235507802,1.22,Boîte 500g,Lidl,34326300400011
+226,Galettes,LU,LU Group,Alimentation,Céréales et produits de boulangerie,0571125026577,2.41,Boîte 500g,Lidl,34326300400011
+227,Déodorant Atomiseur Original,Dove,Dove Group,Hygiène-Beauté,Hygiène corporelle,9680637539169,3.01,Pain 200g,Carrefour,34513048800093
+228,Original Taste,Lipton Ice Tea,Lipton Ice Tea Group,Alimentation,Boissons non alcoolisées,0046394002565,2.4,Bouteille 1.75L,Carrefour,34513048800093
+229,Maïs doux,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,4091767741561,2.32,Conserve 800g,Intermarché,78916932300019
+230,Cidre Brut,Heineken,Heineken Group,Alimentation,Boissons alcoolisées,6585954213637,9.04,Bouteille 75cl,Système U,3048120000011
+231,Thon Albacore au naturel,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,9173043620168,3.52,Lot 3x80g,Auchan,41040901500015
+232,Lingettes Bébé,Huggies,Huggies Group,Bébés-Enfants,Couches et changes,8032555375731,17.96,Paquet x56,E.Leclerc,48747091700014
+233,Piles Rechargeables AAA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,6709409246647,4.47,Pack x8,Intermarché,78916932300019
+234,Cocktail de fruits,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,4625023518941,1.36,Conserve 800g,Lidl,34326300400011
+235,Couches Bébé Taille 4,Huggies,Huggies Group,Bébés-Enfants,Couches et changes,1937146409246,17.21,Paquet x48,Monoprix,55201802000013
+236,Pâte à tartiner,Milka,Milka Group,Alimentation,Produits sucrés,1819892641470,5.09,Paquet 150g,Bricomarché,38909735700015
+237,Sardines à l'huile,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,5419272360395,3.3,Boîte 120g,Auchan,41040901500015
+238,Jambon Cuit Supérieur,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,4069338686894,9.61,Barquette 4x100g,Système U,3048120000011
+239,Huile de tournesol,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,8048451905965,5.55,Bouteille 75cl,E.Leclerc,48747091700014
+240,Saucisson Sec Pur Porc,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,3508320181326,9.91,Barquette 4x100g,Auchan,41040901500015
+241,Sardines à l'huile,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,5978553111311,3.37,Boîte 120g,Intermarché,78916932300019
+242,Thé Vert Menthe,Lipton,Lipton Group,Alimentation,"Cacao, café et thé",5344354156170,2.17,Paquet 250g,Monoprix,55201802000013
+243,Galettes,LU,LU Group,Alimentation,Céréales et produits de boulangerie,7417363781546,1.51,Boîte 500g,Lidl,34326300400011
+244,Boisson énergisante,Lipton Ice Tea,Lipton Ice Tea Group,Alimentation,Boissons non alcoolisées,9059245274951,1.67,Bouteille 1.5L,Auchan,41040901500015
+245,Saucisson Sec Pur Porc,Jean Rozé,Jean Rozé Group,Alimentation,Viandes,2235583505538,7.9,Pièce 300g,Système U,3048120000011
+246,Brosse à dents medium,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,6239543833699,1.18,Spray 200ml,Lidl,34326300400011
+247,Thé Vert Menthe,L'Or,L'Or Group,Alimentation,"Cacao, café et thé",8528574348288,5.26,Boîte 20 sachets,Lidl,34326300400011
+248,Capsules 3en1,Skip,Skip Group,Entretien et nettoyage,Lessives,1804600081679,13.03,Capsules x30,Auchan,41040901500015
+249,Savon de Marseille,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,3770562567743,3.22,Tube 75ml,Bricomarché,38909735700015
+250,Thé glacé,Oasis,Oasis Group,Alimentation,Boissons non alcoolisées,5067901058085,1.06,Canette 33cl,Monoprix,55201802000013
+251,Bonbons gélifiés,M&M's,M&M's Group,Alimentation,Produits sucrés,1312790353655,5.52,Tablette 100g,Bricomarché,38909735700015
+252,Liquide Vaisselle Citron,Paic,Paic Group,Entretien et nettoyage,Produits vaisselle,0863468213265,3.12,Flacon 750ml,Intermarché,78916932300019
+253,Thon Albacore au naturel,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,0115964116664,3.64,Lot 3x80g,Lidl,34326300400011
+254,Capsules 3en1,Persil,Persil Group,Entretien et nettoyage,Lessives,4661202014972,7.01,Flacon 1.5L,Carrefour,34513048800093
+255,Sardines à l'huile,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,9990888135332,2.21,Lot 3x80g,Auchan,41040901500015
+256,Chips saveur Paprika,St Michel,St Michel Group,Alimentation,Plats préparés et snacks,5792916240858,5.34,Sachet 150g,Bricomarché,38909735700015
+257,Huile d'olive vierge extra,Lesieur,Lesieur Group,Alimentation,Huiles et matières grasses,0210629508898,7.28,Bouteille 1L,Intermarché,78916932300019
+258,Fromage Blanc,Yoplait,Yoplait Group,Alimentation,Lait et produits laitiers,7193141425931,3.21,Plaquette 250g,Bricomarché,38909735700015
+259,Lessive Poudre,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,9800409790523,13.48,Flacon 1.5L,Bricomarché,38909735700015
+260,Eau Minérale,Volvic,Volvic Group,Alimentation,Boissons non alcoolisées,6647201223056,1.57,Pack 6x1.5L,Carrefour,34513048800093
+261,Galettes,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,6217450654279,1.29,Paquet 200g,Auchan,41040901500015
+262,Cacao en poudre,Nescafé,Nescafé Group,Alimentation,"Cacao, café et thé",0295208496643,2.35,Boîte 20 sachets,E.Leclerc,48747091700014
+263,Brosse à dents medium,Elmex,Elmex Group,Hygiène-Beauté,Hygiène bucco-dentaire,3700728096831,4.66,Tube 75ml,Carrefour,34513048800093
+264,Cacao en poudre,Lipton,Lipton Group,Alimentation,"Cacao, café et thé",2459635742287,3.56,Boîte 200g,Intermarché,78916932300019
+265,Pastilles Lave-Vaisselle,Mir,Mir Group,Entretien et nettoyage,Produits vaisselle,0797491669549,3.17,Tablettes x30,E.Leclerc,48747091700014
+266,Pain de mie,LU,LU Group,Alimentation,Céréales et produits de boulangerie,6146187886540,2.43,Paquet 200g,Monoprix,55201802000013
+267,Bonbons gélifiés,Milka,Milka Group,Alimentation,Produits sucrés,0207601512035,2.68,Tablette 100g,Monoprix,55201802000013
+268,Petits Pois extra-fins,D'aucy,D'aucy Group,Alimentation,Fruits et légumes,5115103985071,1.12,Conserve 400g,Lidl,34326300400011
+269,Tablette Chocolat au Lait,Granola,Granola Group,Alimentation,Produits sucrés,6080324023569,4.15,Pot 1kg,Système U,3048120000011
+270,Biscottes,LU,LU Group,Alimentation,Céréales et produits de boulangerie,5114399827676,1.51,Paquet 200g,Carrefour,34513048800093
+271,Pâtes Coquillettes,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,4204184663020,2.46,Sachet 500g,E.Leclerc,48747091700014
+272,Liquide Vaisselle Citron,Paic,Paic Group,Entretien et nettoyage,Produits vaisselle,7267432773428,3.15,Tablettes x30,Lidl,34326300400011
+273,Sardines à l'huile,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,5795574706544,2.32,Lot 3x80g,Carrefour,34513048800093
+274,Gel Douche Surgras,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,3142761803609,4.12,Pain 200g,Lidl,34326300400011
+275,Liquide Vaisselle Citron,Mir,Mir Group,Entretien et nettoyage,Produits vaisselle,0266772674737,3.61,Tablettes x30,Système U,3048120000011
+276,Piles Alcalines AA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,5580492810998,9.15,Pack x4,Intermarché,78916932300019
+277,Lingettes Bébé,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,4032267614993,11.95,Paquet x48,Intermarché,78916932300019
+278,Saucisson Sec Pur Porc,Jean Rozé,Jean Rozé Group,Alimentation,Viandes,1133512063788,7.34,Pièce 300g,Lidl,34326300400011
+279,Pastilles Lave-Vaisselle,Mir,Mir Group,Entretien et nettoyage,Produits vaisselle,7506373831737,3.46,Flacon 750ml,Lidl,34326300400011
+280,Brosse à dents medium,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,9871774188482,1.3,Tube 75ml,Système U,3048120000011
+281,Huile d'olive vierge extra,Puget,Puget Group,Alimentation,Huiles et matières grasses,8096084514948,9.92,Bouteille 75cl,Intermarché,78916932300019
+282,Dentifrice Protection Caries,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,1491881136770,3.89,Flacon 250ml,Intermarché,78916932300019
+283,Lingettes Bébé,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,5455965429369,18.93,Paquet x48,Carrefour,34513048800093
+284,Lessive Liquide Original,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,3825193558841,11.55,Flacon 1.5L,Bricomarché,38909735700015
+285,Crème fraîche,Andros,Andros Group,Alimentation,Lait et produits laitiers,5438584168413,2.35,Pack 4x125g,Système U,3048120000011
+286,Bière blonde,Heineken,Heineken Group,Alimentation,Boissons alcoolisées,5423740989896,9.96,Canette 50cl,Monoprix,55201802000013
+287,Cidre Brut,1664,1664 Group,Alimentation,Boissons alcoolisées,6430906883195,11.66,Canette 50cl,Bricomarché,38909735700015
+288,Yaourt aux Fruits,Yoplait,Yoplait Group,Alimentation,Lait et produits laitiers,5441360180325,3.2,Plaquette 250g,Carrefour,34513048800093
+289,Pâtes Coquillettes,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,5605399196911,1.09,Paquet 200g,E.Leclerc,48747091700014
+290,Huile d'olive vierge extra,Puget,Puget Group,Alimentation,Huiles et matières grasses,0303392013338,8.45,Bouteille 1L,Lidl,34326300400011
+291,Déodorant Atomiseur Original,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,4155329899456,1.81,Flacon 250ml,Monoprix,55201802000013
+292,Pâte à tartiner,Granola,Granola Group,Alimentation,Produits sucrés,1491351944447,3.49,Paquet 150g,Lidl,34326300400011
+293,Couches Bébé Taille 4,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,9311884986832,18.53,Paquet x56,Intermarché,78916932300019
+294,Huile d'olive vierge extra,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,4023019896026,8.14,Bouteille 1L,E.Leclerc,48747091700014
+295,Dentifrice Protection Caries,Elmex,Elmex Group,Hygiène-Beauté,Hygiène bucco-dentaire,8958347719425,4.06,Spray 200ml,Lidl,34326300400011
+296,Gel Douche Surgras,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,8151928384917,1.62,Pain 200g,E.Leclerc,48747091700014
+297,Café Moulu L'Or Absolu,Lipton,Lipton Group,Alimentation,"Cacao, café et thé",3496587575005,4.06,Boîte 200g,E.Leclerc,48747091700014
+298,Piles Alcalines AA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,7692602159045,8.33,Pack x4,E.Leclerc,48747091700014
+299,Lait Demi-Écrémé,Yoplait,Yoplait Group,Alimentation,Lait et produits laitiers,8816213511880,3.57,Pack 6x1L,Intermarché,78916932300019
+300,Huile de tournesol,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,8168303422003,3.99,Bouteille 75cl,Auchan,41040901500015
+301,Thé Vert Menthe,Lipton,Lipton Group,Alimentation,"Cacao, café et thé",3506171079564,5.66,Paquet 250g,Système U,3048120000011
+302,Capsules 3en1,Skip,Skip Group,Entretien et nettoyage,Lessives,6697900531822,6.37,Capsules x30,Carrefour,34513048800093
+303,Fromage Blanc,Andros,Andros Group,Alimentation,Lait et produits laitiers,9449722690570,2.34,Pack 4x125g,Système U,3048120000011
+304,Boisson énergisante,Badoit,Badoit Group,Alimentation,Boissons non alcoolisées,3713794523040,2.26,Pack 6x1.5L,Système U,3048120000011
+305,Petits Pois extra-fins,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,1255983452363,1.72,Conserve 800g,E.Leclerc,48747091700014
+306,Capsules 3en1,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,2037165587686,11.93,Capsules x30,Monoprix,55201802000013
+307,Pastilles Lave-Vaisselle,Sun,Sun Group,Entretien et nettoyage,Produits vaisselle,5253447190383,3.76,Flacon 750ml,Système U,3048120000011
+308,Capsules 3en1,Ariel,Ariel Group,Entretien et nettoyage,Lessives,7162310386342,7.71,Capsules x30,Système U,3048120000011
+309,Eau Minérale,Volvic,Volvic Group,Alimentation,Boissons non alcoolisées,0802162248135,2.26,Bouteille 1.5L,Monoprix,55201802000013
+310,Couches Bébé Taille 4,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,5690936086398,4.8,Paquet x48,Système U,3048120000011
+311,Thé glacé,Lipton Ice Tea,Lipton Ice Tea Group,Alimentation,Boissons non alcoolisées,8683426217966,1.6,Canette 33cl,Intermarché,78916932300019
+312,Pastilles Lave-Vaisselle,Paic,Paic Group,Entretien et nettoyage,Produits vaisselle,7295334431085,1.56,Flacon 750ml,E.Leclerc,48747091700014
+313,Eau de Source,Cristaline,Cristaline Group,Alimentation,Boissons non alcoolisées,5508222570233,1.43,Bouteille 1.75L,Bricomarché,38909735700015
+314,Dentifrice Protection Caries,Colgate,Colgate Group,Hygiène-Beauté,Hygiène bucco-dentaire,1802725542754,2.12,Spray 200ml,Monoprix,55201802000013
+315,Couches Bébé Taille 4,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,4866177419405,13.98,Paquet x48,Système U,3048120000011
+316,Lessive Liquide Original,Persil,Persil Group,Entretien et nettoyage,Lessives,4144311131261,9.96,Capsules x30,Bricomarché,38909735700015
+317,Pizza 4 Fromages,Lay's,Lay's Group,Alimentation,Plats préparés et snacks,7002114672817,3.66,Barquette 350g,Carrefour,34513048800093
+318,Original Taste,Coca-Cola,Coca-Cola Group,Alimentation,Boissons non alcoolisées,5668930674101,0.75,Canette 33cl,Bricomarché,38909735700015
+319,Dentifrice Protection Caries,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,6066389178383,3.65,Spray 200ml,E.Leclerc,48747091700014
+320,Crème fraîche,Président,Président Group,Alimentation,Lait et produits laitiers,1471825619217,4.83,Pack 6x1L,Bricomarché,38909735700015
+321,Petits Pois extra-fins,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,7047813626495,1.24,Conserve 800g,Auchan,41040901500015
+322,Pâtes Coquillettes,Barilla,Barilla Group,Alimentation,Céréales et produits de boulangerie,7565578559778,2.34,Boîte 500g,Carrefour,34513048800093
+323,Pâtes Coquillettes,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,2385832339879,1.89,Boîte 500g,Monoprix,55201802000013
+324,Jambon Cuit Supérieur,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,2178507969347,4.13,Pièce 300g,Bricomarché,38909735700015
+325,Yaourt Nature,Yoplait,Yoplait Group,Alimentation,Lait et produits laitiers,1063646426176,2.72,Plaquette 250g,Intermarché,78916932300019
+326,Huile de tournesol,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,8707774351223,5.06,Bouteille 1L,E.Leclerc,48747091700014
+327,Jambon Cuit Supérieur,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,9920619087029,6.8,Pièce 300g,Système U,3048120000011
+328,Galettes,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,1065783533779,2.02,Boîte 500g,Monoprix,55201802000013
+329,Fromage Blanc,Candia,Candia Group,Alimentation,Lait et produits laitiers,7801318297532,3.89,Pack 6x1L,Lidl,34326300400011
+330,Yaourt aux Fruits,Lactel,Lactel Group,Alimentation,Lait et produits laitiers,1839402139082,3.25,Pack 4x125g,Monoprix,55201802000013
+331,Original Taste,Oasis,Oasis Group,Alimentation,Boissons non alcoolisées,2122100912255,1.21,Bouteille 1.5L,Monoprix,55201802000013
+332,Yaourt Nature,Lactel,Lactel Group,Alimentation,Lait et produits laitiers,8267805969075,2.04,Plaquette 250g,Système U,3048120000011
+333,Huile de tournesol,Lesieur,Lesieur Group,Alimentation,Huiles et matières grasses,9100006610409,7.48,Bouteille 75cl,Auchan,41040901500015
+334,Huile de tournesol,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,7819077208881,7.08,Bouteille 75cl,Système U,3048120000011
+335,Lessive Poudre,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,4475545352352,6.47,Capsules x30,Intermarché,78916932300019
+336,Thon Albacore au naturel,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,0946738223154,2.81,Lot 3x80g,Carrefour,34513048800093
+337,Gel Douche Surgras,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,7143755130417,2.22,Flacon 250ml,Système U,3048120000011
+338,Cocktail de fruits,D'aucy,D'aucy Group,Alimentation,Fruits et légumes,9531134978022,1.91,Conserve 400g,Intermarché,78916932300019
+339,Thé Vert Menthe,Nescafé,Nescafé Group,Alimentation,"Cacao, café et thé",2708564049043,5.91,Boîte 200g,Système U,3048120000011
+340,Dentifrice Protection Caries,Elmex,Elmex Group,Hygiène-Beauté,Hygiène bucco-dentaire,5628380916350,1.83,Pain 200g,Intermarché,78916932300019
+341,Sardines à l'huile,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,6919474644037,3.41,Boîte 120g,Lidl,34326300400011
+342,Sardines à l'huile,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,8483098324517,2.9,Boîte 120g,Intermarché,78916932300019
+343,Lessive Poudre,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,3551375048168,13.92,Flacon 1.5L,Bricomarché,38909735700015
+344,Capsules 3en1,Skip,Skip Group,Entretien et nettoyage,Lessives,1133910088024,11.3,Flacon 1.5L,Auchan,41040901500015
+345,Cocktail de fruits,D'aucy,D'aucy Group,Alimentation,Fruits et légumes,2989183354491,2.98,Conserve 400g,Auchan,41040901500015
+346,Chips saveur Paprika,Pringles,Pringles Group,Alimentation,Plats préparés et snacks,9708331027932,2.1,Barquette 350g,Lidl,34326300400011
+347,Lingettes Bébé,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,5930114308400,6.03,Paquet x48,Monoprix,55201802000013
+348,Huile d'olive vierge extra,Puget,Puget Group,Alimentation,Huiles et matières grasses,2365905175917,5.73,Bouteille 75cl,Système U,3048120000011
+349,Pastilles Lave-Vaisselle,Mir,Mir Group,Entretien et nettoyage,Produits vaisselle,0018448154780,1.97,Tablettes x30,Intermarché,78916932300019
+350,Biscuits fourrés,Granola,Granola Group,Alimentation,Produits sucrés,2774102926039,5.62,Paquet 150g,Lidl,34326300400011
+351,Piles Rechargeables AAA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,9843481637874,5.61,Pack x4,Carrefour,34513048800093
+352,Jambon Cuit Supérieur,Jean Rozé,Jean Rozé Group,Alimentation,Viandes,4063003985558,4.38,Pièce 300g,Carrefour,34513048800093
+353,Chips saveur Paprika,Ben's Original,Ben's Original Group,Alimentation,Plats préparés et snacks,3372951448062,1.61,Barquette 350g,Monoprix,55201802000013
+354,Café Moulu L'Or Absolu,L'Or,L'Or Group,Alimentation,"Cacao, café et thé",0757238900175,3.78,Boîte 20 sachets,Lidl,34326300400011
+355,Gel Douche Surgras,Dove,Dove Group,Hygiène-Beauté,Hygiène corporelle,5621501611301,1.72,Spray 200ml,Bricomarché,38909735700015
+356,Tablette Chocolat au Lait,Kinder,Kinder Group,Alimentation,Produits sucrés,2963474279489,1.55,Paquet 150g,Monoprix,55201802000013
+357,Lessive Liquide Original,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,7649429384655,10.78,Capsules x30,Intermarché,78916932300019
+358,Yaourt Nature,Lactel,Lactel Group,Alimentation,Lait et produits laitiers,6360852891541,5.9,Pack 6x1L,E.Leclerc,48747091700014
+359,Lingettes Bébé,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,1667446176516,8.99,Paquet x56,E.Leclerc,48747091700014
+360,Piles Alcalines AA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,0136143103060,7.89,Pack x4,E.Leclerc,48747091700014
+361,Pâtes Coquillettes,Harrys,Harrys Group,Alimentation,Céréales et produits de boulangerie,4726152901342,2.18,Paquet 200g,Auchan,41040901500015
+362,Haricots verts,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,3091874221483,2.2,Conserve 400g,Carrefour,34513048800093
+363,Gel Douche Surgras,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,2704868090156,3.12,Flacon 250ml,Monoprix,55201802000013
+364,Couches Bébé Taille 4,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,0204341920397,10.13,Paquet x56,Carrefour,34513048800093
+365,Liquide Vaisselle Citron,Mir,Mir Group,Entretien et nettoyage,Produits vaisselle,5241035815268,3.07,Flacon 750ml,Lidl,34326300400011
+366,Cacao en poudre,L'Or,L'Or Group,Alimentation,"Cacao, café et thé",2933919671833,2.76,Boîte 200g,Carrefour,34513048800093
+367,Pâtes Coquillettes,Panzani,Panzani Group,Alimentation,Céréales et produits de boulangerie,9680263266194,2.53,Paquet 200g,E.Leclerc,48747091700014
+368,Biscuits fourrés,M&M's,M&M's Group,Alimentation,Produits sucrés,6624609014455,5.82,Pot 1kg,Lidl,34326300400011
+369,Haricots verts,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,1264038147192,1.39,Conserve 400g,Carrefour,34513048800093
+370,Dentifrice Protection Caries,Colgate,Colgate Group,Hygiène-Beauté,Hygiène bucco-dentaire,0191225570338,2.52,Tube 75ml,Monoprix,55201802000013
+371,Sardines à l'huile,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,8582355721035,2.89,Lot 3x80g,Intermarché,78916932300019
+372,Déodorant Atomiseur Original,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,0544084559646,2.63,Pain 200g,Auchan,41040901500015
+373,Cacao en poudre,Nescafé,Nescafé Group,Alimentation,"Cacao, café et thé",3163979605991,4.16,Paquet 250g,Bricomarché,38909735700015
+374,Steak Haché Pur Bœuf 15% MG,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,4521065442377,6.47,Barquette 4x100g,Intermarché,78916932300019
+375,Liquide Vaisselle Citron,Sun,Sun Group,Entretien et nettoyage,Produits vaisselle,1760686858034,2.82,Tablettes x30,Système U,3048120000011
+376,Jambon Cuit Supérieur,Jean Rozé,Jean Rozé Group,Alimentation,Viandes,0813409298226,5.36,Barquette 4x100g,Carrefour,34513048800093
+377,Huile d'olive vierge extra,Lesieur,Lesieur Group,Alimentation,Huiles et matières grasses,3588189049593,7.79,Bouteille 1L,Carrefour,34513048800093
+378,Huile de tournesol,Lesieur,Lesieur Group,Alimentation,Huiles et matières grasses,4563282571652,4.78,Bouteille 1L,Carrefour,34513048800093
+379,Steak Haché Pur Bœuf 15% MG,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,1855265047593,4.79,Barquette 4x100g,Auchan,41040901500015
+380,Eau Minérale,Lipton Ice Tea,Lipton Ice Tea Group,Alimentation,Boissons non alcoolisées,8239454559723,1.55,Bouteille 1.5L,Auchan,41040901500015
+381,Boisson énergisante,Red Bull,Red Bull Group,Alimentation,Boissons non alcoolisées,6450350497151,1.29,Pack 6x1.5L,Monoprix,55201802000013
+382,Cidre Brut,Desperados,Desperados Group,Alimentation,Boissons alcoolisées,6975839580150,12.38,Bouteille 1L,Intermarché,78916932300019
+383,Whisky,Ricard,Ricard Group,Alimentation,Boissons alcoolisées,4005606607642,10.38,Bouteille 75cl,E.Leclerc,48747091700014
+384,Dentifrice Protection Caries,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,0859249203679,3.07,Pain 200g,Bricomarché,38909735700015
+385,Thon Albacore au naturel,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,9809969561949,4.61,Boîte 120g,Auchan,41040901500015
+386,Couches Bébé Taille 4,Huggies,Huggies Group,Bébés-Enfants,Couches et changes,4392469001152,12.99,Paquet x56,Système U,3048120000011
+387,Maïs doux,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,5838908484388,1.9,Conserve 400g,Système U,3048120000011
+388,Brosse à dents medium,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,9747681224776,1.34,Spray 200ml,Carrefour,34513048800093
+389,Lingettes Bébé,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,5686078560360,19.13,Paquet x48,Bricomarché,38909735700015
+390,Brosse à dents medium,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,1163749824500,2.95,Tube 75ml,Carrefour,34513048800093
+391,Pâtes Coquillettes,La Boulangère,La Boulangère Group,Alimentation,Céréales et produits de boulangerie,2756395223798,1.11,Sachet 500g,Système U,3048120000011
+392,Lingettes Bébé,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,5080727637456,15.03,Paquet x48,Bricomarché,38909735700015
+393,Déodorant Atomiseur Original,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,6778690422177,3.52,Flacon 250ml,Carrefour,34513048800093
+394,Petits Pois extra-fins,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,8993020871649,2.64,Conserve 400g,Intermarché,78916932300019
+395,Capsules 3en1,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,5959802268260,12.06,Capsules x30,Bricomarché,38909735700015
+396,Steak Haché Pur Bœuf 15% MG,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,9000414502245,4.41,Barquette 4x100g,Auchan,41040901500015
+397,Yaourt Nature,Danone,Danone Group,Alimentation,Lait et produits laitiers,4193737072177,1.26,Pack 4x125g,Carrefour,34513048800093
+398,Pain de mie,La Boulangère,La Boulangère Group,Alimentation,Céréales et produits de boulangerie,4098211619049,2.46,Sachet 500g,Auchan,41040901500015
+399,Lait Demi-Écrémé,Lactel,Lactel Group,Alimentation,Lait et produits laitiers,7276511950384,3.99,Plaquette 250g,Auchan,41040901500015
+400,Gel Douche Surgras,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,5734376994940,2.89,Flacon 250ml,Monoprix,55201802000013
+401,Whisky,1664,1664 Group,Alimentation,Boissons alcoolisées,7996624782312,7.64,Canette 50cl,Système U,3048120000011
+402,Gel Douche Surgras,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,6723718935313,4.06,Tube 75ml,E.Leclerc,48747091700014
+403,Yaourt Nature,Lactel,Lactel Group,Alimentation,Lait et produits laitiers,0362645537496,4.58,Plaquette 250g,Carrefour,34513048800093
+404,Sardines à l'huile,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,1585139227416,2.19,Boîte 120g,Lidl,34326300400011
+405,Riz Cantonais,Ben's Original,Ben's Original Group,Alimentation,Plats préparés et snacks,7948970023267,5.91,Sachet 150g,Lidl,34326300400011
+406,Lessive Poudre,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,2690800027857,13.1,Capsules x30,Lidl,34326300400011
+407,Huile d'olive vierge extra,Lesieur,Lesieur Group,Alimentation,Huiles et matières grasses,4494312490813,3.24,Bouteille 1L,Système U,3048120000011
+408,Couches Bébé Taille 4,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,8130347618483,14.67,Paquet x56,Monoprix,55201802000013
+409,Couches Bébé Taille 4,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,7483428267294,11.76,Paquet x56,E.Leclerc,48747091700014
+410,Huile de tournesol,Lesieur,Lesieur Group,Alimentation,Huiles et matières grasses,6264647676262,5.19,Bouteille 1L,Intermarché,78916932300019
+411,Pizza 4 Fromages,St Michel,St Michel Group,Alimentation,Plats préparés et snacks,3132312551318,2.88,Barquette 350g,Carrefour,34513048800093
+412,Jambon Cuit Supérieur,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,3709268113053,9.2,Pièce 300g,Lidl,34326300400011
+413,Haricots verts,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,5102143523721,1.55,Conserve 400g,Carrefour,34513048800093
+414,Couches Bébé Taille 4,Huggies,Huggies Group,Bébés-Enfants,Couches et changes,8263202745908,6.65,Paquet x48,Lidl,34326300400011
+415,Bonbons gélifiés,Milka,Milka Group,Alimentation,Produits sucrés,1573673084190,5.64,Pot 1kg,Lidl,34326300400011
+416,Déodorant Atomiseur Original,Dove,Dove Group,Hygiène-Beauté,Hygiène corporelle,1102948794252,4.75,Pain 200g,Carrefour,34513048800093
+417,Steak Haché Pur Bœuf 15% MG,Jean Rozé,Jean Rozé Group,Alimentation,Viandes,8645858272487,7.12,Barquette 4x100g,Monoprix,55201802000013
+418,Gel Douche Surgras,Nivea,Nivea Group,Hygiène-Beauté,Hygiène corporelle,9416787223784,3.25,Flacon 250ml,Lidl,34326300400011
+419,Saucisson Sec Pur Porc,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,9386374253626,9.61,Pièce 300g,Monoprix,55201802000013
+420,Piles Alcalines AA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,5853000044247,8.04,Pack x8,Lidl,34326300400011
+421,Haricots verts,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,2917240600410,1.77,Conserve 800g,Lidl,34326300400011
+422,Pain de mie,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,1688345822656,0.86,Sachet 500g,Carrefour,34513048800093
+423,Pâte à tartiner,Milka,Milka Group,Alimentation,Produits sucrés,0399665990420,3.39,Pot 1kg,Auchan,41040901500015
+424,Jambon Cuit Supérieur,Monique Ranou,Monique Ranou Group,Alimentation,Viandes,4993437111608,3.12,Barquette 4x100g,Auchan,41040901500015
+425,Huile d'olive vierge extra,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,7643104038130,6.42,Bouteille 75cl,Carrefour,34513048800093
+426,Huile d'olive vierge extra,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,0243857670488,7.55,Bouteille 75cl,Monoprix,55201802000013
+427,Cacao en poudre,Nescafé,Nescafé Group,Alimentation,"Cacao, café et thé",9576758410558,5.86,Paquet 250g,Auchan,41040901500015
+428,Chips saveur Paprika,Ben's Original,Ben's Original Group,Alimentation,Plats préparés et snacks,9082000930458,3.23,Barquette 350g,Intermarché,78916932300019
+429,Bonbons gélifiés,Milka,Milka Group,Alimentation,Produits sucrés,2612006943236,4.74,Paquet 150g,E.Leclerc,48747091700014
+430,Lingettes Bébé,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,6241656249625,13.03,Paquet x48,Bricomarché,38909735700015
+431,Biscuits fourrés,Kinder,Kinder Group,Alimentation,Produits sucrés,2792036773529,2.67,Paquet 150g,Intermarché,78916932300019
+432,Tablette Chocolat au Lait,Haribo,Haribo Group,Alimentation,Produits sucrés,6845808099665,1.52,Paquet 150g,Carrefour,34513048800093
+433,Pastilles Lave-Vaisselle,Mir,Mir Group,Entretien et nettoyage,Produits vaisselle,1191763274766,3.62,Tablettes x30,Système U,3048120000011
+434,Dentifrice Protection Caries,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,3444203085940,1.68,Flacon 250ml,Carrefour,34513048800093
+435,Spaghetti,Barilla,Barilla Group,Alimentation,Céréales et produits de boulangerie,8601562107040,1.34,Sachet 500g,Bricomarché,38909735700015
+436,Pâte à tartiner,M&M's,M&M's Group,Alimentation,Produits sucrés,6726006596104,4.32,Paquet 150g,Lidl,34326300400011
+437,Café Moulu L'Or Absolu,Nescafé,Nescafé Group,Alimentation,"Cacao, café et thé",5716998819795,2.8,Boîte 20 sachets,Intermarché,78916932300019
+438,Huile d'olive vierge extra,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,8727865438626,7.26,Bouteille 1L,E.Leclerc,48747091700014
+439,Spaghetti,Barilla,Barilla Group,Alimentation,Céréales et produits de boulangerie,8130264599223,2.62,Sachet 500g,Auchan,41040901500015
+440,Gel Douche Surgras,Dove,Dove Group,Hygiène-Beauté,Hygiène corporelle,7729987973345,1.82,Pain 200g,Système U,3048120000011
+441,Biscottes,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,7555632152854,1.42,Boîte 500g,Lidl,34326300400011
+442,Lessive Liquide Original,Ariel,Ariel Group,Entretien et nettoyage,Lessives,9354605308629,8.78,Flacon 1.5L,Intermarché,78916932300019
+443,Thé Vert Menthe,Lipton,Lipton Group,Alimentation,"Cacao, café et thé",3503448934953,3.92,Boîte 200g,Système U,3048120000011
+444,Piles Alcalines AA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,2645901117440,5.69,Pack x8,Carrefour,34513048800093
+445,Lessive Liquide Original,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,7926324449758,6.28,Flacon 1.5L,Monoprix,55201802000013
+446,Cidre Brut,Heineken,Heineken Group,Alimentation,Boissons alcoolisées,9679977973924,5.48,Bouteille 1L,Lidl,34326300400011
+447,Haricots verts,D'aucy,D'aucy Group,Alimentation,Fruits et légumes,0650463018083,2.02,Conserve 400g,E.Leclerc,48747091700014
+448,Huile d'olive vierge extra,Puget,Puget Group,Alimentation,Huiles et matières grasses,3363958376786,8.74,Bouteille 1L,Intermarché,78916932300019
+449,Biscottes,Harrys,Harrys Group,Alimentation,Céréales et produits de boulangerie,2987531611050,1.36,Boîte 500g,Intermarché,78916932300019
+450,Fromage Blanc,Danone,Danone Group,Alimentation,Lait et produits laitiers,5812120571743,3.1,Pack 4x125g,Bricomarché,38909735700015
+451,Déodorant Atomiseur Original,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,7415467102250,2.88,Flacon 250ml,Auchan,41040901500015
+452,Thon Albacore au naturel,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,8671378000279,2.4,Lot 3x80g,Monoprix,55201802000013
+453,Capsules 3en1,Persil,Persil Group,Entretien et nettoyage,Lessives,6792723599810,10.39,Flacon 1.5L,Intermarché,78916932300019
+454,Piles Alcalines AA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,9475223863069,7.62,Pack x8,Monoprix,55201802000013
+455,Dentifrice Protection Caries,Oral-B,Oral-B Group,Hygiène-Beauté,Hygiène bucco-dentaire,8460134097659,1.29,Flacon 250ml,Auchan,41040901500015
+456,Café Moulu L'Or Absolu,L'Or,L'Or Group,Alimentation,"Cacao, café et thé",9714685532121,5.14,Boîte 200g,E.Leclerc,48747091700014
+457,Pain de mie,Barilla,Barilla Group,Alimentation,Céréales et produits de boulangerie,3324964160981,2.76,Paquet 200g,Bricomarché,38909735700015
+458,Original Taste,Red Bull,Red Bull Group,Alimentation,Boissons non alcoolisées,5534899903340,0.78,Canette 33cl,Système U,3048120000011
+459,Thon Albacore au naturel,Petit Navire,Petit Navire Group,Alimentation,Produits de la pêche et d'aquaculture,6502332490121,3.08,Boîte 120g,Auchan,41040901500015
+460,Saucisson Sec Pur Porc,Jean Rozé,Jean Rozé Group,Alimentation,Viandes,3506976121451,6.36,Pièce 300g,Lidl,34326300400011
+461,Couches Bébé Taille 4,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,4075022551331,16.75,Paquet x48,Intermarché,78916932300019
+462,Crème fraîche,Yoplait,Yoplait Group,Alimentation,Lait et produits laitiers,0467649103040,1.4,Plaquette 250g,Système U,3048120000011
+463,Eau Minérale,Cristaline,Cristaline Group,Alimentation,Boissons non alcoolisées,1377084602161,0.56,Bouteille 1.5L,Lidl,34326300400011
+464,Jambon Cuit Supérieur,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,8115794914777,4.29,Barquette 4x100g,Système U,3048120000011
+465,Lessive Liquide Original,Le Chat,Le Chat Group,Entretien et nettoyage,Lessives,3331988431157,9.81,Flacon 1.5L,Intermarché,78916932300019
+466,Galettes,Harrys,Harrys Group,Alimentation,Céréales et produits de boulangerie,2911205466561,2.44,Paquet 200g,Monoprix,55201802000013
+467,Piles Rechargeables AAA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,1749720779856,6.15,Pack x8,E.Leclerc,48747091700014
+468,Couches Bébé Taille 4,Huggies,Huggies Group,Bébés-Enfants,Couches et changes,6799435048391,16.08,Paquet x48,Bricomarché,38909735700015
+469,Pâte à tartiner,Nutella,Nutella Group,Alimentation,Produits sucrés,3544155643455,4.39,Tablette 100g,Carrefour,34513048800093
+470,Gel Douche Surgras,Dove,Dove Group,Hygiène-Beauté,Hygiène corporelle,9877558943964,3.69,Tube 75ml,Auchan,41040901500015
+471,Café Moulu L'Or Absolu,Lipton,Lipton Group,Alimentation,"Cacao, café et thé",5372079756160,5.49,Boîte 20 sachets,Carrefour,34513048800093
+472,Eau Minérale,Red Bull,Red Bull Group,Alimentation,Boissons non alcoolisées,4261716545605,1.29,Bouteille 1.75L,Système U,3048120000011
+473,Lingettes Bébé,Pampers,Pampers Group,Bébés-Enfants,Couches et changes,2760541571879,6.48,Paquet x48,Intermarché,78916932300019
+474,Huile d'olive vierge extra,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,1599157474646,6.89,Bouteille 1L,Carrefour,34513048800093
+475,Gel Douche Surgras,Dove,Dove Group,Hygiène-Beauté,Hygiène corporelle,5044994443851,2.99,Pain 200g,Auchan,41040901500015
+476,Maïs doux,Green Giant,Green Giant Group,Alimentation,Fruits et légumes,6977974109807,1.19,Conserve 800g,Monoprix,55201802000013
+477,Couches Bébé Taille 4,Pommette,Pommette Group,Bébés-Enfants,Couches et changes,7415414191337,5.11,Paquet x56,Intermarché,78916932300019
+478,Huile d'olive vierge extra,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,1504345252975,4.65,Bouteille 1L,Lidl,34326300400011
+479,Pastilles Lave-Vaisselle,Sun,Sun Group,Entretien et nettoyage,Produits vaisselle,0114502425954,2.23,Tablettes x30,Auchan,41040901500015
+480,Spaghetti,Brossard,Brossard Group,Alimentation,Céréales et produits de boulangerie,9565584801357,1.83,Boîte 500g,Monoprix,55201802000013
+481,Pain de mie,Panzani,Panzani Group,Alimentation,Céréales et produits de boulangerie,3121561398898,1.4,Sachet 500g,Monoprix,55201802000013
+482,Eau Minérale,Volvic,Volvic Group,Alimentation,Boissons non alcoolisées,2915861541624,1.87,Bouteille 1.75L,Monoprix,55201802000013
+483,Piles Alcalines AA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,2903149724739,6.87,Pack x8,E.Leclerc,48747091700014
+484,Biscuits fourrés,Milka,Milka Group,Alimentation,Produits sucrés,1725179024761,3.37,Pot 1kg,Monoprix,55201802000013
+485,Haricots verts,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,8164640047152,2.61,Conserve 400g,Bricomarché,38909735700015
+486,Cocktail de fruits,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,1269488334369,1.26,Conserve 800g,Système U,3048120000011
+487,Cocktail de fruits,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,5381033424519,2.54,Conserve 400g,Bricomarché,38909735700015
+488,Maïs doux,Bonduelle,Bonduelle Group,Alimentation,Fruits et légumes,3389679110034,2.72,Conserve 400g,Lidl,34326300400011
+489,Sardines à l'huile,Connétable,Connétable Group,Alimentation,Produits de la pêche et d'aquaculture,4915415449725,3.52,Lot 3x80g,Bricomarché,38909735700015
+490,Huile de tournesol,Isio 4,Isio 4 Group,Alimentation,Huiles et matières grasses,2502412920238,6.04,Bouteille 1L,Bricomarché,38909735700015
+491,Huile d'olive vierge extra,Puget,Puget Group,Alimentation,Huiles et matières grasses,2513715647593,5.22,Bouteille 75cl,Système U,3048120000011
+492,Bonbons gélifiés,Kinder,Kinder Group,Alimentation,Produits sucrés,2163470907816,5.3,Tablette 100g,Monoprix,55201802000013
+493,Déodorant Atomiseur Original,Dove,Dove Group,Hygiène-Beauté,Hygiène corporelle,2511099701894,1.28,Pain 200g,Carrefour,34513048800093
+494,Déodorant Atomiseur Original,Le Petit Marseillais,Le Petit Marseillais Group,Hygiène-Beauté,Hygiène corporelle,1312619267620,3.97,Spray 200ml,Lidl,34326300400011
+495,Saucisson Sec Pur Porc,Fleury Michon,Fleury Michon Group,Alimentation,Viandes,3763251820502,5.94,Barquette 4x100g,E.Leclerc,48747091700014
+496,Chips saveur Paprika,Lay's,Lay's Group,Alimentation,Plats préparés et snacks,6247206763306,3.73,Sachet 150g,Système U,3048120000011
+497,Chips saveur Paprika,St Michel,St Michel Group,Alimentation,Plats préparés et snacks,9145382521475,5.97,Sachet 150g,E.Leclerc,48747091700014
+498,Brosse à dents medium,Colgate,Colgate Group,Hygiène-Beauté,Hygiène bucco-dentaire,1101509647747,2.85,Pain 200g,Auchan,41040901500015
+499,Piles Alcalines AA,Energizer,Energizer Group,Maison et Bricolage,Piles et batteries,3854865157884,9.18,Pack x8,E.Leclerc,48747091700014
+500,Piles Alcalines AA,Duracell,Duracell Group,Maison et Bricolage,Piles et batteries,4994814237492,10.52,Pack x8,Carrefour,34513048800093
