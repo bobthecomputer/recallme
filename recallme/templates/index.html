@@ -31,6 +31,23 @@
             {% endfor %}
         </tbody>
     </table>
+    <h2 class="mt-5">Derniers rappels ({{ recalls|length }})</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th>Marque</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rec in recalls %}
+            <tr>
+                <td>{{ rec.name }}</td>
+                <td>{{ rec.brand }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     {% else %}
     <p>Aucun achat disponible.</p>
     {% endif %}

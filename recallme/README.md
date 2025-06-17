@@ -17,9 +17,20 @@ Dans un projet réel, on utiliserait l'API officielle RappelConso, mais cette d�
    python main.py
    ```
 
+   Le programme affiche maintenant les 20 derniers rappels connus avant de
+   comparer vos achats avec ces rappels. Pour récupérer les rappels réels depuis
+   l'API, définissez la variable d'environnement `RECALLME_USE_API=1` avant
+   d'exécuter le script.
+
 3. Ouvrir l'interface graphique (facultatif) :
    ```bash
    python -m recallme.gui
+   ```
+   Lancez cette commande depuis le dossier parent qui contient le
+   répertoire `recallme`. Si vous êtes déjà dans ce répertoire, exécutez
+   simplement :
+   ```bash
+   python gui.py
    ```
 
 Cette interface utilise Tkinter pour afficher une fenêtre et énumérer les
@@ -29,8 +40,17 @@ produits rappelés détectés dans vos achats.
    ```bash
    python -m recallme.app
    ```
-   Une fois le serveur lancé, ouvrez `http://localhost:5000` dans votre navigateur
-   pour voir vos achats. Les lignes en rouge indiquent les produits rappelés.
+   Comme pour la commande précédente, lancez-la depuis le dossier parent.
+   Depuis `recallme`, vous pouvez exécuter directement :
+   ```bash
+   python app.py
+   ```
+  Une fois le serveur lancé, ouvrez `http://localhost:5000` dans votre navigateur
+  pour voir vos achats. Les lignes en rouge indiquent les produits rappelés. Le
+  site affiche également les 20 derniers rappels connus.
+
+   Pour obtenir les rappels depuis l'API, exportez
+   `RECALLME_USE_API=1` avant de lancer le serveur.
 
    Cette interface web utilise un petit gabarit HTML et la librairie Bootstrap
    pour offrir un aperçu plus attrayant de vos données.
