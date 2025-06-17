@@ -75,4 +75,3 @@ if __name__ == "__main__":
     # if the server is interrupted. Disabling it avoids the common "address
     # already in use" error when restarting.
     app.run(debug=True, host="0.0.0.0", use_reloader=False)
-
