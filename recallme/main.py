@@ -1,4 +1,5 @@
 import json
+import random
 from pathlib import Path
 
 import pandas as pd
@@ -44,6 +45,27 @@ def load_purchases(path="purchases.csv"):
     file_path = BASE_DIR / path
     # On spécifie le type des colonnes pour éviter les erreurs de comparaison
     return pd.read_csv(file_path, dtype={'name': 'string', 'brand': 'string'})
+
+
+def generate_demo_purchases(
+    recalls,
+    path="french_top500_products.csv",
+    num_items=20,
+    max_recalled=3,
+):
+    """Generate a random shopping list including a few recalled products."""
+    data_path = BASE_DIR / path
+    df = pd.read_csv(data_path)
+    purchases = df.sample(n=num_items)[["ProductName", "Brand"]]
+    purchases.rename(columns={"ProductName": "name", "Brand": "brand"}, inplace=True)
+
+    recall_count = random.randint(0, max_recalled)
+    if recall_count:
+        recall_sample = random.sample(recalls, k=recall_count)
+        recall_df = pd.DataFrame(recall_sample)
+        purchases = pd.concat([purchases, recall_df], ignore_index=True)
+
+    return purchases.sample(frac=1).reset_index(drop=True)
 
 
 def check_recalls(recalls, purchases):

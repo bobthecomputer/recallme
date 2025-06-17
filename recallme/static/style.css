@@ -4,3 +4,7 @@ body {
 .table-danger {
     background-color: #f8d7da;
 }
+
+.alert-info {
+    font-size: 1.2rem;
+}
