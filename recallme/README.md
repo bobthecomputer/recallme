@@ -5,6 +5,11 @@ Ceci est une démonstration simplifiée de l'application **RecallMe**. L'idée e
 Le script `main.py` charge une liste factice de rappels et une liste d'achats depuis `purchases.csv`, puis affiche les produits concernés.
 
 Dans un projet réel, on utiliserait l'API officielle RappelConso, mais cette démo utilise des données locales pour faciliter les tests.
+Les rappels peuvent être récupérés depuis l'URL suivante :
+
+```
+https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=20
+```
 
 ## Utilisation
 

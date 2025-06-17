@@ -9,10 +9,8 @@ import requests
 BASE_DIR = Path(__file__).resolve().parent
 
 
-API_URL = (
-    "https://data.economie.gouv.fr/api/explore/v2.1/catalog/"
-    "datasets/rappelconso-v2-gtin-trie/records"
-)
+API_PATH = "/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records"
+API_URL = f"https://data.economie.gouv.fr{API_PATH}"
 
 
 def load_recalls(path="sample_recalls.json", limit=20):
