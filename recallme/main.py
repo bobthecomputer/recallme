@@ -25,7 +25,11 @@ def load_recalls(path="sample_recalls.json", limit=20):
             if name:
                 recalls.append({"name": name, "brand": brand})
         return recalls
-    except Exception:
+    except Exception as e:
+        print(
+            f"Erreur lors de la récupération depuis l'API : {e}. "
+            "Utilisation des données locales."
+        )
         file_path = BASE_DIR / path
         with file_path.open("r", encoding="utf-8") as f:
             return json.load(f)

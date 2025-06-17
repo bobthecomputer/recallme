@@ -25,7 +25,8 @@ https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-g
    Le programme affiche maintenant les 20 derniers rappels connus avant de
    comparer vos achats avec ces rappels. Il tente automatiquement de récupérer
    les rappels depuis l'API officielle RappelConso et revient aux données
-   locales en cas d'échec.
+   locales en cas d'échec. En cas d'erreur réseau, un message indique que les
+   données locales sont utilisées.
 
 3. Ouvrir l'interface graphique (facultatif) :
    ```bash
