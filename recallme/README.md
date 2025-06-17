@@ -63,6 +63,12 @@ produits rappelés détectés dans vos achats.
     rappelés pour visualiser le fonctionnement. Vous pouvez ajuster le nombre
     d'articles en passant `n=40` ou tout autre chiffre dans l'URL `/demo`.
 
+    Les fichiers `french_top500_products.csv` et `sample_recalls.json` sont
+    fournis dans le dépôt. S'ils sont manquants, l'application tentera de les
+    télécharger automatiquement depuis GitHub puis utilisera de petits exemples
+    intégrés en dernier recours. Ainsi la démo fonctionne immédiatement après
+    avoir installé les dépendances.
+
     Cette interface web utilise un petit gabarit HTML et la librairie Bootstrap
     pour offrir un aperçu plus attrayant de vos données.
 
