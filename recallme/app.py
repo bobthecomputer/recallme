@@ -18,19 +18,21 @@ def merge_data():
             rec["name"] == row["name"] and rec["brand"] == row["brand"]
             for rec in recalls
         )
-        results.append({
-            "name": row["name"],
-            "brand": row["brand"],
-            "recalled": recalled,
-        })
-    return results
+        results.append(
+            {
+                "name": row["name"],
+                "brand": row["brand"],
+                "recalled": recalled,
+            }
+        )
+    return results, recalls
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    results = merge_data()
-    return render_template("index.html", results=results)
+    results, recalls = merge_data()
+    return render_template("index.html", results=results, recalls=recalls)
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
