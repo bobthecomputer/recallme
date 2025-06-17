@@ -1,4 +1,4 @@
-
+# RecallMe Demo
 
 Ceci est une démonstration simplifiée de l'application **RecallMe**. L'idée est de montrer comment croiser une liste de rappels produits avec vos achats.
 
@@ -62,6 +62,21 @@ produits rappelés détectés dans vos achats.
     `french_top500_products.csv`. Cette liste inclut entre 0 et 3 produits
     rappelés pour visualiser le fonctionnement. Vous pouvez ajuster le nombre
     d'articles en passant `n=40` ou tout autre chiffre dans l'URL `/demo`.
+
+    Les fichiers `french_top500_products.csv` et `sample_recalls.json` sont
+    fournis dans le dépôt. S'ils sont manquants, l'application tentera de les
+    télécharger automatiquement depuis GitHub puis utilisera de petits exemples
+    intégrés en dernier recours. Ainsi la démo fonctionne immédiatement après
+    avoir installé les dépendances.
+
+    Si vous relancez le serveur plusieurs fois, le port 5000 peut rester
+    occupé. L'application démarre maintenant sans le reloader afin d'éviter ce
+    problème. Au besoin, terminez le processus Python précédent ou modifiez le
+    port dans `app.py`.
+
+    Pour personnaliser l'en-tête avec votre logo, placez simplement une image
+    nommée `logo.png` dans le dossier `recallme/static/`. L'application la
+    chargera automatiquement si elle est présente.
 
     Cette interface web utilise un petit gabarit HTML et la librairie Bootstrap
     pour offrir un aperçu plus attrayant de vos données.

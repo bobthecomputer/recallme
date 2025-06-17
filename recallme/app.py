@@ -1,4 +1,8 @@
 from flask import Flask, render_template, request
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+STATIC_DIR = BASE_DIR / "static"
 
 try:  # Support execution with `python app.py`
     from .main import (
@@ -8,9 +12,8 @@ try:  # Support execution with `python app.py`
     )  # type: ignore
 except ImportError:  # pragma: no cover - fallback for direct script execution
     import sys
-    from pathlib import Path
 
-    sys.path.append(str(Path(__file__).resolve().parent))
+    sys.path.append(str(BASE_DIR))
     from main import load_recalls, load_purchases, generate_demo_purchases
 
 def merge_data():
@@ -55,16 +58,20 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     recalls = load_recalls()
+    logo_exists = (STATIC_DIR / "logo.png").exists()
     # No purchase list by default; users can try the demo instead
-    return render_template("index.html", results=[], recalls=recalls)
+    return render_template("index.html", results=[], recalls=recalls, logo_exists=logo_exists)
 
 
 @app.route("/demo")
 def demo():
     num = int(request.args.get("n", 20))
     results, recalls = merge_demo_data(num)
-    return render_template("index.html", results=results, recalls=recalls)
+    logo_exists = (STATIC_DIR / "logo.png").exists()
+    return render_template("index.html", results=results, recalls=recalls, logo_exists=logo_exists)
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
-
+    # The reloader can spawn multiple processes which may leave the port busy
+    # if the server is interrupted. Disabling it avoids the common "address
+    # already in use" error when restarting.
+    app.run(debug=True, host="0.0.0.0", use_reloader=False)
