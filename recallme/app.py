@@ -1,4 +1,4 @@
-from Flask import Flask, render_template, request
+from flask import Flask, render_template, request
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
