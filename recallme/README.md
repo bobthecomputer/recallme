@@ -3,11 +3,15 @@
 Ceci est une démonstration simplifiée de l'application **RecallMe**. L'idée est de montrer comment croiser une liste de rappels produits avec vos achats.
 
 Le script `main.py` récupère la liste des rappels depuis l'API officielle
-RappelConso. Par défaut il bascule sur un fichier local si la connexion échoue.
-Vous pouvez **désactiver ce repli** et préciser le nombre de tentatives avec
-`load_recalls(require_api=True, retries=3)`. Utiliser `retries=None` lance
+RappelConso et signale une erreur si la connexion échoue. Vous pouvez
+**réactiver** le repli sur un fichier local en appelant
+`load_recalls(require_api=False, retries=3)`. Utiliser `retries=None` lance
 une boucle infinie d'essais, ce qui peut bloquer l'application si l'accès au
 réseau est restreint.
+
+Dans certains environnements, un proxy HTTP peut empêcher l'accès à
+l'API. Dans ce cas vous pouvez passer `use_proxy=False` pour ignorer les
+variables `HTTP(S)_PROXY`.
 
 Les rappels proviennent de l'URL suivante :
 
@@ -97,11 +101,4 @@ Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel san
 Si l'application reste bloquée en attendant la réponse de l'API, commencez par vérifier la connectivité :
 
 ```bash
-curl "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1" -H "Accept: application/json"
-```
-
-Cette commande doit renvoyer un petit document JSON. Vous pouvez également tester l'appel directement depuis Python :
-
-```bash
-python -m recallme.check_api
-```
+curl "[https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1](https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1)" -H "Accept: application/json"
