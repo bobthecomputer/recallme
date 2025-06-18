@@ -1,8 +1,13 @@
-from Flask import Flask, render_template, request
+from flask import Flask, render_template, request
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"
+
+USE_PROXY = None
+if os.getenv("RECALLME_NO_PROXY"):
+    USE_PROXY = False
 
 try:  # Support execution with `python app.py`
     from .main import (
@@ -17,7 +22,9 @@ except ImportError:  # pragma: no cover - fallback for direct script execution
     from main import load_recalls, load_purchases, generate_demo_purchases
 
 def merge_data():
-    recalls = load_recalls(require_api=True, retries=3)
+    # For the demo we always fetch data from the API. If it échoue, an error
+    # page is displayed instead of falling back to sample data.
+    recalls = load_recalls(require_api=True, retries=3, use_proxy=USE_PROXY)
     purchases = load_purchases()
     results = []
     for _, row in purchases.iterrows():
@@ -36,7 +43,9 @@ def merge_data():
 
 
 def merge_demo_data(num_items=20):
-    recalls = load_recalls(require_api=True, retries=3)
+    # Demo purchases also rely solely on live data. Any network failure causes
+    # an exception instead of silently using bundled samples.
+    recalls = load_recalls(require_api=True, retries=3, use_proxy=USE_PROXY)
     purchases = generate_demo_purchases(recalls, num_items=num_items)
     results = []
     for _, row in purchases.iterrows():
@@ -57,7 +66,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    recalls = load_recalls(require_api=True, retries=3)
+    # Retrieve recalls directly from the API. Failure to connect results in an
+    # error instead of falling back to bundled data.
+    recalls = load_recalls(require_api=True, retries=3, use_proxy=USE_PROXY)
     logo_exists = (STATIC_DIR / "logo.png").exists()
     # No purchase list by default; users can try the demo instead
     return render_template("index.html", results=[], recalls=recalls, logo_exists=logo_exists)
