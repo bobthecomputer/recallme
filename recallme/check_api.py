@@ -1,5 +1,6 @@
 import os
 import requests
+import argparse
 
 API_PATH = "/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records"
 API_URL = f"https://data.economie.gouv.fr{API_PATH}"
@@ -15,6 +16,7 @@ def check_api(limit: int = 5, *, use_proxy: bool | None = None) -> None:
     env_proxy = os.environ.get("https_proxy") or os.environ.get("HTTPS_PROXY")
     if env_proxy:
         print("Using proxy:", env_proxy if use_proxy is not False else "disabled")
+
     resp = requests.get(
         API_URL,
         params={"limit": limit},
@@ -38,8 +40,6 @@ def check_api(limit: int = 5, *, use_proxy: bool | None = None) -> None:
 
 
 if __name__ == "__main__":
-    import argparse
-
     parser = argparse.ArgumentParser(description="Test the RappelConso API")
     parser.add_argument("--limit", type=int, default=5, help="number of results")
     parser.add_argument(

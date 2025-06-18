@@ -101,19 +101,4 @@ Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel san
 Si l'application reste bloquée en attendant la réponse de l'API, commencez par vérifier la connectivité :
 
 ```bash
-curl "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1" -H "Accept: application/json"
-```
-
-Cette commande doit renvoyer un petit document JSON. Vous pouvez également tester l'appel directement depuis Python :
-
-```bash
-python -m recallme.check_api
-```
-
-Si vous obtenez une erreur 403 alors que la commande fonctionne en dehors de
-votre environnement, il est probable qu'un proxy réseau bloque l'accès.
-Vous pouvez réessayer en ignorant les variables `HTTP(S)_PROXY` :
-
-```bash
-python -m recallme.check_api --no-proxy
-```
+curl "[https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1](https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1)" -H "Accept: application/json"
