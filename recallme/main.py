@@ -58,9 +58,19 @@ def load_recalls(
             print(
                 "Tentative de récupération des données depuis l'API RappelConso..."
             )
-            response = requests.get(f"{API_URL}?limit={limit}", timeout=10)
+            response = requests.get(
+                API_URL,
+                params={"limit": limit},
+                timeout=10,
+            )
+            print("Status:", response.status_code)
             response.raise_for_status()
-            data = response.json()
+            try:
+                data = response.json()
+            except ValueError as e:
+                print("Body was not JSON:", response.text[:300])
+                raise
+
             recalls = []
             for item in data.get("results", []):
                 name = item.get("libelle_commercial")

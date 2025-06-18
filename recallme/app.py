@@ -1,3 +1,9 @@
+
+### 2. Fichier `app.py` (Corrigé)
+
+J'ai choisi `retries=3` pour éviter que le serveur web ne se bloque indéfiniment en cas de problème réseau.
+
+```python
 from flask import Flask, render_template, request
 from pathlib import Path
 
@@ -17,7 +23,7 @@ except ImportError:  # pragma: no cover - fallback for direct script execution
     from main import load_recalls, load_purchases, generate_demo_purchases
 
 def merge_data():
-    recalls = load_recalls(require_api=True, retries=None)
+    recalls = load_recalls(require_api=True, retries=3)
     purchases = load_purchases()
     results = []
     for _, row in purchases.iterrows():
@@ -36,7 +42,7 @@ def merge_data():
 
 
 def merge_demo_data(num_items=20):
-    recalls = load_recalls(require_api=True, retries=None)
+    recalls = load_recalls(require_api=True, retries=3)
     purchases = generate_demo_purchases(recalls, num_items=num_items)
     results = []
     for _, row in purchases.iterrows():
@@ -57,7 +63,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    recalls = load_recalls(require_api=True, retries=None)
+    recalls = load_recalls(require_api=True, retries=3)
     logo_exists = (STATIC_DIR / "logo.png").exists()
     # No purchase list by default; users can try the demo instead
     return render_template("index.html", results=[], recalls=recalls, logo_exists=logo_exists)

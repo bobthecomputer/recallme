@@ -3,9 +3,12 @@
 Ceci est une démonstration simplifiée de l'application **RecallMe**. L'idée est de montrer comment croiser une liste de rappels produits avec vos achats.
 
 Le script `main.py` récupère la liste des rappels depuis l'API officielle
-RappelConso. Par défaut il bascule sur un fichier local si la connexion échoue,
-mais vous pouvez **désactiver ce repli** et forcer autant de tentatives que
-nécessaire en appelant ``load_recalls(require_api=True, retries=None)``.
+RappelConso. Par défaut il bascule sur un fichier local si la connexion échoue.
+Vous pouvez **désactiver ce repli** et préciser le nombre de tentatives avec
+`load_recalls(require_api=True, retries=3)`. Utiliser `retries=None` lance
+une boucle infinie d'essais, ce qui peut bloquer l'application si l'accès au
+réseau est restreint.
+
 Les rappels proviennent de l'URL suivante :
 
 https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=20
@@ -26,8 +29,10 @@ https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-g
     les rappels depuis l'API officielle RappelConso et revient aux données
     locales en cas d'échec. En cas d'erreur réseau, un message indique que les
     données locales sont utilisées. Pour exiger absolument les données de
-    l'API, utilisez ``load_recalls(require_api=True, retries=None)`` afin de
-    réessayer indéfiniment jusqu'au succès.
+    l'API, passez `require_api=True`. Vous pouvez augmenter le nombre de
+    tentatives avec `retries=5` ou plus, mais notez qu'une valeur `None`
+    relance la requête indéfiniment et peut bloquer la démo si l'accès à
+    l'API est impossible.
 
 3.  Ouvrir l'interface graphique (facultatif) :
     ```bash
@@ -86,3 +91,10 @@ produits rappelés détectés dans vos achats.
     pour offrir un aperçu plus attrayant de vos données.
 
 Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel sanitaire.
+
+## Dépannage
+
+Si l'application reste bloquée en attendant la réponse de l'API, commencez par vérifier la connectivité :
+
+```bash
+curl "[https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1](https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1)" -H "Accept: application/json"
