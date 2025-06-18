@@ -10,7 +10,7 @@ import requests
 BASE_DIR = Path(__file__).resolve().parent
 
 API_PATH = "/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records"
-API_URL = f"[https://data.economie.gouv.fr](https://data.economie.gouv.fr){API_PATH}"
+API_URL = f"https://data.economie.gouv.fr{API_PATH}"
 
 FALLBACK_RECALLS = [
     {"name": "Lait entier 1L", "brand": "MarqueX"},
@@ -111,7 +111,7 @@ def load_recalls(
                 with file_path.open("r", encoding="utf-8") as f:
                     return json.load(f)
             url = (
-                "[https://raw.githubusercontent.com/bobthecomputer/recallme/main/](https://raw.githubusercontent.com/bobthecomputer/recallme/main/)"
+                "https://raw.githubusercontent.com/bobthecomputer/recallme/main/"
                 f"recallme/{path}"
             )
             if _download_file(url, file_path):
@@ -137,7 +137,7 @@ def generate_demo_purchases(
     data_path = BASE_DIR / path
     if not data_path.exists():
         url = (
-            "[https://raw.githubusercontent.com/bobthecomputer/recallme/main/](https://raw.githubusercontent.com/bobthecomputer/recallme/main/)"
+            "https://raw.githubusercontent.com/bobthecomputer/recallme/main/"
             f"recallme/{path}"
         )
         if not _download_file(url, data_path):
