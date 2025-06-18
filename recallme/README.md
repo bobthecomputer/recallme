@@ -105,6 +105,7 @@ Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel san
 Si l'application reste bloquée en attendant la réponse de l'API, commencez par vérifier la connectivité :
 
 ```bash
+<<<<<<< aswyud-codex/corriger-erreur-module-flask-non-trouvé
 curl "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1&order_by=date_publication%20desc" -H "Accept: application/json"
 ```
 
@@ -122,3 +123,6 @@ Vous pouvez réessayer en ignorant les variables `HTTP(S)_PROXY` (avec
 ```bash
 python -m recallme.check_api --no-proxy
 ```
+=======
+curl "[https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1&order_by=date_publication%20desc](https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1&order_by=date_publication%20desc)" -H "Accept: application/json"
+>>>>>>> main

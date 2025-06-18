@@ -1,8 +1,9 @@
 import os
 import requests
+import argparse
 
 API_PATH = "/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records"
-API_URL = f"https://data.economie.gouv.fr{API_PATH}"
+API_URL = f"[https://data.economie.gouv.fr](https://data.economie.gouv.fr){API_PATH}"
 
 
 def check_api(limit: int = 5, *, use_proxy: bool | None = None) -> None:
@@ -41,8 +42,6 @@ def check_api(limit: int = 5, *, use_proxy: bool | None = None) -> None:
 
 
 if __name__ == "__main__":
-    import argparse
-
     parser = argparse.ArgumentParser(description="Test the RappelConso API")
     parser.add_argument("--limit", type=int, default=5, help="number of results")
     parser.add_argument(
