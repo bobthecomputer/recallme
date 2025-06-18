@@ -86,3 +86,13 @@ produits rappelés détectés dans vos achats.
     pour offrir un aperçu plus attrayant de vos données.
 
 Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel sanitaire.
+## Dépannage
+
+Si l'application reste bloquée en attendant la réponse de l'API, commencez par vérifier la connectivité :
+
+```bash
+curl "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1" -H "Accept: application/json"
+```
+
+Cette commande doit renvoyer un court objet JSON. Si elle échoue (timeout, message HTML ou erreur SSL), consultez votre proxy ou mettez à jour le paquet `certifi`. Vous pouvez temporairement passer `verify=False` à `requests.get` pour tester.
+
