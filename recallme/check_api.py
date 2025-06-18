@@ -1,6 +1,6 @@
 import os
 import requests
-import argparse
+        params={"limit": limit, "order_by": "date_publication desc"},
 
 API_PATH = "/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records"
 API_URL = f"https://data.economie.gouv.fr{API_PATH}"

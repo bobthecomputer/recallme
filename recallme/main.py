@@ -60,7 +60,7 @@ def load_recalls(
                 "Tentative de récupération des données depuis l'API RappelConso..."
             )
             kwargs = {
-                "params": {"limit": limit},
+                "params": {"limit": limit, "order_by": "date_publication desc"},
                 "headers": {"Accept": "application/json"},
                 "timeout": 10,
             }

@@ -13,9 +13,10 @@ Dans certains environnements, un proxy HTTP peut empêcher l'accès à
 l'API. Dans ce cas vous pouvez passer `use_proxy=False` pour ignorer les
 variables `HTTP(S)_PROXY`.
 
-Les rappels proviennent de l'URL suivante :
+Les rappels proviennent de l'URL suivante, triée par date de publication la plus
+récente :
 
-https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=20
+https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=20&order_by=date_publication%20desc
 
 
 ## Utilisation
@@ -101,4 +102,4 @@ Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel san
 Si l'application reste bloquée en attendant la réponse de l'API, commencez par vérifier la connectivité :
 
 ```bash
-curl "[https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1](https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1)" -H "Accept: application/json"
+curl "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1&order_by=date_publication%20desc" -H "Accept: application/json"
