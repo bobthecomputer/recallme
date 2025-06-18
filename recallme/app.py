@@ -1,3 +1,9 @@
+
+### 2. Fichier `app.py` (Corrigé)
+
+J'ai choisi `retries=3` pour éviter que le serveur web ne se bloque indéfiniment en cas de problème réseau.
+
+```python
 from flask import Flask, render_template, request
 from pathlib import Path
 

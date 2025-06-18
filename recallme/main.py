@@ -70,6 +70,7 @@ def load_recalls(
             except ValueError as e:
                 print("Body was not JSON:", response.text[:300])
                 raise
+
             recalls = []
             for item in data.get("results", []):
                 name = item.get("libelle_commercial")
