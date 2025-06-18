@@ -17,7 +17,7 @@ except ImportError:  # pragma: no cover - fallback for direct script execution
     from main import load_recalls, load_purchases, generate_demo_purchases
 
 def merge_data():
-    recalls = load_recalls()
+    recalls = load_recalls(require_api=True, retries=None)
     purchases = load_purchases()
     results = []
     for _, row in purchases.iterrows():
@@ -36,7 +36,7 @@ def merge_data():
 
 
 def merge_demo_data(num_items=20):
-    recalls = load_recalls()
+    recalls = load_recalls(require_api=True, retries=None)
     purchases = generate_demo_purchases(recalls, num_items=num_items)
     results = []
     for _, row in purchases.iterrows():
@@ -57,7 +57,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    recalls = load_recalls()
+    recalls = load_recalls(require_api=True, retries=None)
     logo_exists = (STATIC_DIR / "logo.png").exists()
     # No purchase list by default; users can try the demo instead
     return render_template("index.html", results=[], recalls=recalls, logo_exists=logo_exists)
