@@ -10,12 +10,14 @@ une boucle infinie d'essais, ce qui peut bloquer l'application si l'accès au
 réseau est restreint.
 
 Dans certains environnements, un proxy HTTP peut empêcher l'accès à
-l'API. Dans ce cas vous pouvez passer `use_proxy=False` pour ignorer les
-variables `HTTP(S)_PROXY`.
+l'API. Vous pouvez passer `use_proxy=False` ou définir la variable
+`RECALLME_NO_PROXY=1` pour ignorer les variables `HTTP(S)_PROXY`.
+La plupart des commandes acceptent également `--no-proxy`.
 
-Les rappels proviennent de l'URL suivante :
+Les rappels proviennent de l'URL suivante, triée par date de publication la plus
+récente. Seuls les vingt derniers résultats sont conservés pour la comparaison :
 
-https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=20
+https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=20&order_by=date_publication%20desc
 
 
 ## Utilisation
@@ -24,9 +26,9 @@ https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-g
     ```bash
     pip install -r requirements.txt
     ```
-2.  Lancer le script :
+2.  Lancer le script (optionnellement avec `--no-proxy`) :
     ```bash
-    python main.py
+    python main.py [--no-proxy]
     ```
     Le programme affiche maintenant les 20 derniers rappels connus avant de
     comparer vos achats avec ces rappels. Il tente automatiquement de récupérer
@@ -73,7 +75,9 @@ produits rappelés détectés dans vos achats.
     d'achats (20 articles par défaut) à partir du fichier
     `french_top500_products.csv`. Un à trois produits rappelés peuvent y être
     insérés aléatoirement, mais il est également possible qu'aucun rappel ne
-    soit présent. Vous pouvez ajuster le nombre d'articles en passant `n=40`
+    soit présent. Ces rappels proviennent toujours de la liste des 20 plus
+    récents retournés par l'API, garantissant ainsi la cohérence avec les
+    données affichées. Vous pouvez ajuster le nombre d'articles en passant `n=40`
     ou tout autre chiffre dans l'URL `/demo`.
 
     Les fichiers `french_top500_products.csv` et `sample_recalls.json` sont
@@ -101,4 +105,4 @@ Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel san
 Si l'application reste bloquée en attendant la réponse de l'API, commencez par vérifier la connectivité :
 
 ```bash
-curl "[https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1](https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1)" -H "Accept: application/json"
+curl "[https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1&order_by=date_publication%20desc](https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1&order_by=date_publication%20desc)" -H "Accept: application/json"
