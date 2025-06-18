@@ -17,7 +17,10 @@ except ImportError:  # pragma: no cover - fallback for direct script execution
     from main import load_recalls, load_purchases, generate_demo_purchases
 
 def merge_data():
-    recalls = load_recalls(require_api=True, retries=3)
+    # Allow the application to keep working even if the API is unreachable by
+    # falling back to bundled sample data. ``require_api`` is therefore set to
+    # ``False`` so a network error won't prevent the page from loading.
+    recalls = load_recalls(require_api=False, retries=3)
     purchases = load_purchases()
     results = []
     for _, row in purchases.iterrows():
@@ -36,7 +39,9 @@ def merge_data():
 
 
 def merge_demo_data(num_items=20):
-    recalls = load_recalls(require_api=True, retries=3)
+    # Same logic for the demo mode: we prefer using the live API but can
+    # gracefully fall back to local data when the network is unavailable.
+    recalls = load_recalls(require_api=False, retries=3)
     purchases = generate_demo_purchases(recalls, num_items=num_items)
     results = []
     for _, row in purchases.iterrows():
@@ -57,7 +62,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    recalls = load_recalls(require_api=True, retries=3)
+    # Retrieve recalls with the same tolerant behaviour as above so the web
+    # page can render offline as well.
+    recalls = load_recalls(require_api=False, retries=3)
     logo_exists = (STATIC_DIR / "logo.png").exists()
     # No purchase list by default; users can try the demo instead
     return render_template("index.html", results=[], recalls=recalls, logo_exists=logo_exists)
