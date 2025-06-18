@@ -1,5 +1,6 @@
 import json
 import random
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -36,40 +37,66 @@ def _download_file(url: str, path: Path) -> bool:
         return False
 
 
-def load_recalls(path: str = "sample_recalls.json", limit: int = 20):
-    """Load recall data from the API with multiple fallbacks."""
-    try:
-        print("Tentative de récupération des données depuis l'API RappelConso...")
-        response = requests.get(f"{API_URL}?limit={limit}", timeout=10)
-        response.raise_for_status()
-        data = response.json()
-        recalls = []
-        for item in data.get("results", []):
-            name = item.get("libelle_commercial")
-            brand = item.get("marque_produit", "")
-            if name:
-                recalls.append({"name": name, "brand": brand})
-        print("Données récupérées avec succès depuis l'API.")
-        return recalls
-    except Exception as e:  # pragma: no cover - API error fallback
-        print(
-            f"Erreur lors de la récupération depuis l'API : {e}. "
-            "Utilisation des données locales en repli."
-        )
-        file_path = BASE_DIR / path
-        if file_path.exists():
-            with file_path.open("r", encoding="utf-8") as f:
-                return json.load(f)
-        # try to download from GitHub
-        url = (
-            "https://raw.githubusercontent.com/bobthecomputer/recallme/main/"
-            f"recallme/{path}"
-        )
-        if _download_file(url, file_path):
-            with file_path.open("r", encoding="utf-8") as f:
-                return json.load(f)
-        print("Utilisation d'un petit jeu de données intégré.")
-        return FALLBACK_RECALLS
+def load_recalls(
+    path: str = "sample_recalls.json",
+    limit: int = 20,
+    *,
+    require_api: bool = False,
+    retries: int | None = 3,
+):
+    """Load recall data from the API with optional retries.
+
+    If ``require_api`` is ``True`` the function will retry the HTTP request
+    ``retries`` times (``None`` means infinite) and will not fall back to local
+    data. When ``require_api`` is ``False`` (the default) the previous
+    behaviour with local fallbacks is preserved.
+    """
+
+    attempt = 0
+    while True:
+        try:
+            print(
+                "Tentative de récupération des données depuis l'API RappelConso..."
+            )
+            response = requests.get(f"{API_URL}?limit={limit}", timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            recalls = []
+            for item in data.get("results", []):
+                name = item.get("libelle_commercial")
+                brand = item.get("marque_produit", "")
+                if name:
+                    recalls.append({"name": name, "brand": brand})
+            if not recalls:
+                raise ValueError("Aucune donnée retournée par l'API")
+            print("Données récupérées avec succès depuis l'API.")
+            return recalls
+        except Exception as e:  # pragma: no cover - API error fallback
+            attempt += 1
+            print(f"Erreur lors de la récupération depuis l'API : {e}.")
+            if require_api:
+                if retries is not None and attempt >= retries:
+                    raise RuntimeError(
+                        "Impossible de récupérer les rappels depuis l'API"
+                    )
+                print("Nouvelle tentative dans 5 secondes...")
+                time.sleep(5)
+                continue
+            # legacy fallback behaviour
+            print("Utilisation des données locales en repli.")
+            file_path = BASE_DIR / path
+            if file_path.exists():
+                with file_path.open("r", encoding="utf-8") as f:
+                    return json.load(f)
+            url = (
+                "https://raw.githubusercontent.com/bobthecomputer/recallme/main/"
+                f"recallme/{path}"
+            )
+            if _download_file(url, file_path):
+                with file_path.open("r", encoding="utf-8") as f:
+                    return json.load(f)
+            print("Utilisation d'un petit jeu de données intégré.")
+            return FALLBACK_RECALLS
 
 
 def load_purchases(path: str = "purchases.csv"):
@@ -102,34 +129,15 @@ def generate_demo_purchases(
     purchases = df.sample(n=min(num_items, len(df)))[["ProductName", "Brand"]]
     purchases.rename(columns={"ProductName": "name", "Brand": "brand"}, inplace=True)
 
-    recall_count = random.randint(0, max_recalled)
-    if recall_count:
-        recall_sample = random.sample(recalls, k=min(recall_count, len(recalls)))
-        recall_df = pd.DataFrame(recall_sample)
-        purchases = pd.concat([purchases, recall_df], ignore_index=True)
+    if recalls:
+        recall_count = random.randint(0, min(max_recalled, len(recalls)))
+        if recall_count:
+            recall_sample = random.sample(recalls, k=recall_count)
+            recall_df = pd.DataFrame(recall_sample)
+            purchases = pd.concat([purchases, recall_df], ignore_index=True)
 
     return purchases.sample(frac=1).reset_index(drop=True)
 
-
-def generate_demo_purchases(
-    recalls,
-    path="french_top500_products.csv",
-    num_items=20,
-    max_recalled=3,
-):
-    """Generate a random shopping list including a few recalled products."""
-    data_path = BASE_DIR / path
-    df = pd.read_csv(data_path)
-    purchases = df.sample(n=num_items)[["ProductName", "Brand"]]
-    purchases.rename(columns={"ProductName": "name", "Brand": "brand"}, inplace=True)
-
-    recall_count = random.randint(0, max_recalled)
-    if recall_count:
-        recall_sample = random.sample(recalls, k=recall_count)
-        recall_df = pd.DataFrame(recall_sample)
-        purchases = pd.concat([purchases, recall_df], ignore_index=True)
-
-    return purchases.sample(frac=1).reset_index(drop=True)
 
 
 def check_recalls(recalls, purchases):
