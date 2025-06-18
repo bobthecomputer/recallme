@@ -1,4 +1,5 @@
 import json
+import os
 import random
 import time
 from pathlib import Path
@@ -43,6 +44,7 @@ def load_recalls(
     *,
     require_api: bool = False,
     retries: int | None = 3,
+    use_proxy: bool | None = None,
 ):
     """Load recall data from the API with optional retries.
 
@@ -52,17 +54,23 @@ def load_recalls(
     behaviour with local fallbacks is preserved.
     """
 
+    if use_proxy is None and os.getenv("RECALLME_NO_PROXY"):
+        use_proxy = False
+
     attempt = 0
     while True:
         try:
             print(
                 "Tentative de récupération des données depuis l'API RappelConso..."
             )
-            response = requests.get(
-                API_URL,
-                params={"limit": limit},
-                timeout=10,
-            )
+            kwargs = {
+                "params": {"limit": limit, "order_by": "date_publication desc"},
+                "headers": {"Accept": "application/json"},
+                "timeout": 10,
+            }
+            if use_proxy is False:
+                kwargs["proxies"] = {"http": None, "https": None}
+            response = requests.get(API_URL, **kwargs)
             print("Status:", response.status_code)
             response.raise_for_status()
             try:
@@ -71,9 +79,13 @@ def load_recalls(
                 print("Body was not JSON:", response.text[:300])
                 raise
 
+            results = data.get("results", [])
+            # Ensure we always work with the most recent recalls.
+            results.sort(key=lambda r: r.get("date_publication", ""), reverse=True)
+
             recalls = []
-            for item in data.get("results", []):
-                name = item.get("libelle_commercial")
+            for item in results[:limit]:
+                name = item.get("libelle") or item.get("libelle_commercial")
                 brand = item.get("marque_produit", "")
                 if name:
                     recalls.append({"name": name, "brand": brand})
@@ -167,9 +179,9 @@ def check_recalls(recalls, purchases):
     return alerts
 
 
-def main():
+def main(*, no_proxy: bool = False):
     """Fonction principale du script."""
-    recalls = load_recalls()
+    recalls = load_recalls(require_api=True, retries=3, use_proxy=False if no_proxy else None)
     print("\n--- Derniers rappels connus ---")
     if not recalls:
         print("Aucun rappel à afficher.")
@@ -191,4 +203,13 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Analyse vos achats")
+    parser.add_argument(
+        "--no-proxy",
+        action="store_true",
+        help="ignore HTTP(S)_PROXY variables (or set RECALLME_NO_PROXY=1)",
+    )
+    args = parser.parse_args()
+    main(no_proxy=args.no_proxy)
