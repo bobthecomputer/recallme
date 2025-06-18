@@ -97,7 +97,6 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    global USE_PROXY
     if args.no_proxy:
         USE_PROXY = False
 
