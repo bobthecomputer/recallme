@@ -98,6 +98,25 @@ produits rappelés détectés dans vos achats.
     Cette interface web utilise un petit gabarit HTML et la librairie Bootstrap
     pour offrir un aperçu plus attrayant de vos données.
 
+5.  Ouvrir l'application dans une fenêtre (facultatif) :
+    ```bash
+    python -m recallme.desktop
+    ```
+    Cette commande démarre le serveur Flask puis affiche l'interface web dans
+    une petite fenêtre grâce à la bibliothèque `pywebview`. Aucun navigateur
+    séparé n'est nécessaire.
+
+### Créer un exécutable
+
+Vous pouvez emballer cette application dans un binaire autonome avec
+`PyInstaller` :
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile -n RecallMe recallme/desktop.py
+```
+Le programme compilé sera disponible dans le dossier `dist/`.
+
 Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel sanitaire.
 
 ## Dépannage
