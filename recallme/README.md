@@ -3,15 +3,21 @@
 Ceci est une démonstration simplifiée de l'application **RecallMe**. L'idée est de montrer comment croiser une liste de rappels produits avec vos achats.
 
 Le script `main.py` récupère la liste des rappels depuis l'API officielle
-RappelConso. Par défaut il bascule sur un fichier local si la connexion échoue.
-Vous pouvez **désactiver ce repli** et préciser le nombre de tentatives avec
-`load_recalls(require_api=True, retries=3)`. Utiliser `retries=None` lance
+RappelConso et signale une erreur si la connexion échoue. Vous pouvez
+**réactiver** le repli sur un fichier local en appelant
+`load_recalls(require_api=False, retries=3)`. Utiliser `retries=None` lance
 une boucle infinie d'essais, ce qui peut bloquer l'application si l'accès au
 réseau est restreint.
 
-Les rappels proviennent de l'URL suivante :
+Dans certains environnements, un proxy HTTP peut empêcher l'accès à
+l'API. Vous pouvez passer `use_proxy=False` ou définir la variable
+`RECALLME_NO_PROXY=1` pour ignorer les variables `HTTP(S)_PROXY`.
+La plupart des commandes acceptent également `--no-proxy`.
 
-https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=20
+Les rappels proviennent de l'URL suivante, triée par date de publication la plus
+récente. Seuls les vingt derniers résultats sont conservés pour la comparaison :
+
+https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=20&order_by=date_publication%20desc
 
 
 ## Utilisation
@@ -20,9 +26,9 @@ https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-g
     ```bash
     pip install -r requirements.txt
     ```
-2.  Lancer le script :
+2.  Lancer le script (optionnellement avec `--no-proxy`) :
     ```bash
-    python main.py
+    python main.py [--no-proxy]
     ```
     Le programme affiche maintenant les 20 derniers rappels connus avant de
     comparer vos achats avec ces rappels. Il tente automatiquement de récupérer
@@ -69,7 +75,9 @@ produits rappelés détectés dans vos achats.
     d'achats (20 articles par défaut) à partir du fichier
     `french_top500_products.csv`. Un à trois produits rappelés peuvent y être
     insérés aléatoirement, mais il est également possible qu'aucun rappel ne
-    soit présent. Vous pouvez ajuster le nombre d'articles en passant `n=40`
+    soit présent. Ces rappels proviennent toujours de la liste des 20 plus
+    récents retournés par l'API, garantissant ainsi la cohérence avec les
+    données affichées. Vous pouvez ajuster le nombre d'articles en passant `n=40`
     ou tout autre chiffre dans l'URL `/demo`.
 
     Les fichiers `french_top500_products.csv` et `sample_recalls.json` sont
@@ -97,4 +105,20 @@ Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel san
 Si l'application reste bloquée en attendant la réponse de l'API, commencez par vérifier la connectivité :
 
 ```bash
-curl "[https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1](https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1)" -H "Accept: application/json"
+curl "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1&order_by=date_publication%20desc" -H "Accept: application/json"
+```
+
+Cette commande doit renvoyer un petit document JSON. Vous pouvez également tester l'appel directement depuis Python :
+
+```bash
+python -m recallme.check_api
+```
+
+Si vous obtenez une erreur 403 alors que la commande fonctionne en dehors de
+votre environnement, il est probable qu'un proxy réseau bloque l'accès.
+Vous pouvez réessayer en ignorant les variables `HTTP(S)_PROXY` (avec
+`--no-proxy` ou `RECALLME_NO_PROXY=1`) :
+
+```bash
+python -m recallme.check_api --no-proxy
+```
