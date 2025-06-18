@@ -1,4 +1,4 @@
-from Flask import Flask, render_template, request
+from flask import Flask, render_template, request
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -17,6 +17,8 @@ except ImportError:  # pragma: no cover - fallback for direct script execution
     from main import load_recalls, load_purchases, generate_demo_purchases
 
 def merge_data():
+    # For the demo we always fetch data from the API. If it échoue, an error
+    # page is displayed instead of falling back to sample data.
     recalls = load_recalls(require_api=True, retries=3)
     purchases = load_purchases()
     results = []
@@ -36,6 +38,8 @@ def merge_data():
 
 
 def merge_demo_data(num_items=20):
+    # Demo purchases also rely solely on live data. Any network failure causes
+    # an exception instead of silently using bundled samples.
     recalls = load_recalls(require_api=True, retries=3)
     purchases = generate_demo_purchases(recalls, num_items=num_items)
     results = []
@@ -57,6 +61,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    # Retrieve recalls directly from the API. Failure to connect results in an
+    # error instead of falling back to bundled data.
     recalls = load_recalls(require_api=True, retries=3)
     logo_exists = (STATIC_DIR / "logo.png").exists()
     # No purchase list by default; users can try the demo instead
