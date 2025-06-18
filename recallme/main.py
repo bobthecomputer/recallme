@@ -61,6 +61,7 @@ def load_recalls(
             response = requests.get(
                 API_URL,
                 params={"limit": limit},
+                headers={"Accept": "application/json"},
                 timeout=10,
             )
             print("Status:", response.status_code)
