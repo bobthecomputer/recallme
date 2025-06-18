@@ -13,6 +13,9 @@ Dans certains environnements, un proxy HTTP peut empêcher l'accès à
 l'API. Vous pouvez passer `use_proxy=False` ou définir la variable
 `RECALLME_NO_PROXY=1` pour ignorer les variables `HTTP(S)_PROXY`.
 La plupart des commandes acceptent également `--no-proxy`.
+Si l'appel échoue à cause d'un proxy, les scripts
+réessaient automatiquement sans proxy avant de passer en
+mode hors connexion.
 
 Les rappels proviennent de l'URL suivante, triée par date de publication la plus
 récente. Seuls les vingt derniers résultats sont conservés pour la comparaison :

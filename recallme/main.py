@@ -70,7 +70,14 @@ def load_recalls(
             }
             if use_proxy is False:
                 kwargs["proxies"] = {"http": None, "https": None}
-            response = requests.get(API_URL, **kwargs)
+            try:
+                response = requests.get(API_URL, **kwargs)
+            except requests.exceptions.ProxyError as exc:
+                if use_proxy is None:
+                    print("Erreur proxy, nouvelle tentative sans proxy...")
+                    use_proxy = False
+                    continue
+                raise
             print("Status:", response.status_code)
             response.raise_for_status()
             try:

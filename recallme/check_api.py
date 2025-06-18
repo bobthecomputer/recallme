@@ -1,12 +1,18 @@
 import os
 import requests
-import argparse
-
-API_PATH = "/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records"
-API_URL = f"[https://data.economie.gouv.fr](https://data.economie.gouv.fr){API_PATH}"
-
-
-def check_api(limit: int = 5, *, use_proxy: bool | None = None) -> None:
+    try:
+        resp = requests.get(
+            API_URL,
+            params={"limit": limit, "order_by": "date_publication desc"},
+            headers={"Accept": "application/json"},
+            timeout=10,
+            proxies=proxies,
+        )
+    except requests.exceptions.ProxyError as exc:
+        if use_proxy is None:
+            print("Proxy error detected, retrying without proxy ...")
+            return check_api(limit=limit, use_proxy=False)
+        raise
     """Fetch sample data from the RappelConso API and print the result."""
     if use_proxy is None and os.getenv("RECALLME_NO_PROXY"):
         use_proxy = False
