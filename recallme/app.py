@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from pathlib import Path
 import os
-
+import argparse
 
 BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"
@@ -23,7 +23,7 @@ except ImportError:  # pragma: no cover - fallback for direct script execution
     from main import load_recalls, load_purchases, generate_demo_purchases
 
 def merge_data():
-    # For the demo we always fetch data from the API. If it échoue, an error
+    # For the demo we always fetch data from the API. If it fails, an error
     # page is displayed instead of falling back to sample data.
     recalls = load_recalls(require_api=True, retries=3, use_proxy=USE_PROXY)
     purchases = load_purchases()
@@ -83,8 +83,6 @@ def demo():
     return render_template("index.html", results=results, recalls=recalls, logo_exists=logo_exists)
 
 if __name__ == "__main__":
-    import argparse
-
     parser = argparse.ArgumentParser(description="Serve the RecallMe demo")
     parser.add_argument(
         "--no-proxy",
