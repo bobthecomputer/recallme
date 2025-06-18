@@ -102,9 +102,9 @@ def generate_demo_purchases(
     purchases = df.sample(n=min(num_items, len(df)))[["ProductName", "Brand"]]
     purchases.rename(columns={"ProductName": "name", "Brand": "brand"}, inplace=True)
 
-    recall_count = random.randint(0, max_recalled)
-    if recall_count:
-        recall_sample = random.sample(recalls, k=min(recall_count, len(recalls)))
+    if recalls:
+        recall_count = random.randint(1, min(max_recalled, len(recalls)))
+        recall_sample = random.sample(recalls, k=recall_count)
         recall_df = pd.DataFrame(recall_sample)
         purchases = pd.concat([purchases, recall_df], ignore_index=True)
 

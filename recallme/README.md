@@ -59,8 +59,9 @@ produits rappelés détectés dans vos achats.
 
     Un bouton "Essayer la démo" permet de générer aléatoirement une liste
     d'achats (20 articles par défaut) à partir du fichier
-    `french_top500_products.csv`. Cette liste inclut entre 0 et 3 produits
-    rappelés pour visualiser le fonctionnement. Vous pouvez ajuster le nombre
+    `french_top500_products.csv`. Cette liste ajoute toujours au moins un
+    produit rappelé (jusqu'à 3 au maximum) pour visualiser le fonctionnement.
+    Vous pouvez ajuster le nombre
     d'articles en passant `n=40` ou tout autre chiffre dans l'URL `/demo`.
 
     Les fichiers `french_top500_products.csv` et `sample_recalls.json` sont
