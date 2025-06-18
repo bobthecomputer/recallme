@@ -54,14 +54,14 @@ https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-g
 Cette interface utilise Tkinter pour afficher une fenêtre et énumérer les
 produits rappelés détectés dans vos achats.
 
-4.  Démarrer l'application web (facultatif) :
+4.  Démarrer l'application web (facultatif) :
     ```bash
-    python -m recallme.app
+    python -m recallme.app [--no-proxy]
     ```
     Comme pour la commande précédente, lancez-la depuis le dossier parent.
     Depuis `recallme`, vous pouvez exécuter directement :
     ```bash
-    python app.py
+    python app.py [--no-proxy]
     ```
     Vous pouvez également lancer le script depuis n'importe quel dossier en
     indiquant son chemin complet ; il s'adaptera automatiquement.

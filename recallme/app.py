@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from pathlib import Path
 import os
 
+
 BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"
 
@@ -82,6 +83,26 @@ def demo():
     return render_template("index.html", results=results, recalls=recalls, logo_exists=logo_exists)
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Serve the RecallMe demo")
+    parser.add_argument(
+        "--no-proxy",
+        action="store_true",
+        help="ignore HTTP(S)_PROXY variables (or set RECALLME_NO_PROXY=1)",
+    )
+    parser.add_argument(
+        "--use-proxy",
+        dest="no_proxy",
+        action="store_false",
+        help="force proxy usage even if RECALLME_NO_PROXY is set",
+    )
+    args = parser.parse_args()
+
+    global USE_PROXY
+    if args.no_proxy:
+        USE_PROXY = False
+
     # The reloader can spawn multiple processes which may leave the port busy
     # if the server is interrupted. Disabling it avoids the common "address
     # already in use" error when restarting.
