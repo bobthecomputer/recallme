@@ -54,7 +54,7 @@ https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-g
 Cette interface utilise Tkinter pour afficher une fenêtre et énumérer les
 produits rappelés détectés dans vos achats.
 
-4.  Démarrer l'application web (facultatif) :
+4.  Démarrer l'application web (facultatif) :
     ```bash
     python -m recallme.app [--no-proxy]
     ```
@@ -110,47 +110,8 @@ produits rappelés détectés dans vos achats.
 ### Créer un exécutable
 
 Vous pouvez emballer cette application dans un binaire autonome avec
-`PyInstaller` :
+`PyInstaller` :
 
 ```bash
 pip install pyinstaller
 pyinstaller --onefile -n RecallMe recallme/desktop.py
-```
-Le programme compilé sera disponible dans le dossier `dist/`.
-Si les bibliothèques nécessaires à `pywebview` (GTK ou Qt) ne sont pas
-présentes, l'exécutable ouvrira votre navigateur par défaut plutôt que
-sa propre fenêtre.
-
-Vous devriez voir la liste des produits achetés faisant l'objet d'un rappel sanitaire.
-
-## Dépannage
-
-Si l'application reste bloquée en attendant la réponse de l'API, commencez par vérifier la connectivité :
-
-```bash
-curl "https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappelconso-v2-gtin-trie/records?limit=1&order_by=date_publication%20desc" -H "Accept: application/json"
-```
-
-Cette commande doit renvoyer un petit document JSON. Vous pouvez également tester l'appel directement depuis Python :
-
-```bash
-python -m recallme.check_api
-```
-
-Si vous obtenez une erreur 403 alors que la commande fonctionne en dehors de
-votre environnement, il est probable qu'un proxy réseau bloque l'accès.
-Vous pouvez réessayer en ignorant les variables `HTTP(S)_PROXY` (avec
-`--no-proxy` ou `RECALLME_NO_PROXY=1`) :
-
-```bash
-python -m recallme.check_api --no-proxy
-```
-
-Si à l'inverse l'appel n'aboutit que lorsque vous passez par votre
-proxy d'entreprise, assurez‑vous que les variables d'environnement
-`HTTP_PROXY` ou `HTTPS_PROXY` sont correctement renseignées. Vous
-pouvez également forcer explicitement leur utilisation :
-
-```bash
-python -m recallme.check_api --use-proxy
-```
