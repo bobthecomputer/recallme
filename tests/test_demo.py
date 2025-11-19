@@ -35,3 +35,22 @@ def test_demo_includes_recall_when_requested(tmp_path, monkeypatch):
     purchases = generate_demo_purchases(SAMPLE_RECALLS, path=str(csv), num_items=1)
     recalled = [p for p in purchases.to_dict(orient="records") if p in SAMPLE_RECALLS]
     assert len(recalled) == 2
+
+
+def test_demo_respects_requested_length_with_small_dataset(tmp_path):
+    csv = tmp_path / "products.csv"
+    df = pd.DataFrame(
+        {
+            "ProductName": ["Baguette", "Croissant"],
+            "Brand": ["Boulangerie", "Viennoiserie"],
+        }
+    )
+    df.to_csv(csv, index=False)
+
+    purchases = generate_demo_purchases(
+        SAMPLE_RECALLS,
+        path=str(csv),
+        num_items=5,
+        max_recalled=0,
+    )
+    assert len(purchases) == 5

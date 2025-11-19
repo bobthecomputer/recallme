@@ -148,7 +148,12 @@ def generate_demo_purchases(
     else:
         df = pd.read_csv(data_path)
 
-    purchases = df.sample(n=min(num_items, len(df)))[["ProductName", "Brand"]]
+    if df.empty:
+        df = pd.DataFrame(FALLBACK_PRODUCTS)
+
+    replace = num_items > len(df)
+    sample_size = num_items if replace else min(num_items, len(df))
+    purchases = df.sample(n=sample_size, replace=replace)[["ProductName", "Brand"]]
     purchases.rename(columns={"ProductName": "name", "Brand": "brand"}, inplace=True)
 
     if recalls:
